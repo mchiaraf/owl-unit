@@ -1,4 +1,4 @@
-@prefix ex: <https://github.com/mchiaraf/owl-unit-tests/test/> .
+@prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/> .
 @prefix a-spe: <https://w3id.org/arco/ontology/natural-specimen-description/> .
 
 ex:RaccoltaX a-spe:hasHarvestingResponsible ex:JaneDoe .
