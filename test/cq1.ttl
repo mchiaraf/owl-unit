@@ -1,10 +1,10 @@
 @prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
 @prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/> .
-@prefix a-spe: <C:\Users\MCF\Documents\GitHub\ArCo\ArCo-release\ontologie\natural-specimen-description\0.1> .
+@prefix a-spe: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/natural-specimen-description.owl> .
 
 ex:cq1.ttl a owlunit:CompetencyQuestionVerification ;
  	owlunit:hasCompetencyQuestion "Who are the responsibles for specimen harvesting?" ;
- 	owlunit:hasSPARQLUnitTest "PREFIX a-spe: <C:\Users\MCF\Documents\GitHub\ArCo\ArCo-release\ontologie\natural-specimen-description\0.1> SELECT DISTINCT ?agent WHERE {?x a a-spe:SpecimenHarvesting . ?x a-spe:hasHarvestingResponsible ?agent .}" ;
+ 	owlunit:hasSPARQLUnitTest "PREFIX a-spe: <https://w3id.org/arco/ontology/natural-specimen-description/> SELECT DISTINCT ?agent WHERE {?x a a-spe:SpecimenHarvesting . ?x a-spe:hasHarvestingResponsible ?agent .}" ;
 	owlunit:hasInputData ex:datacq1.ttl ;
 	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
 	owlunit:hasExpectedResult "{  \"head\": {  \"vars\": [  \"agent\" ] } ,  \"results\": {  \"bindings\": [ {  \"agent\": {  \"type\":  \"uri\" ,  \"value\":  \"https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/Jane Doe\" } } ] } }";
