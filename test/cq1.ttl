@@ -1,5 +1,5 @@
 @prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
-@prefix ex: <https://github.com/mchiaraf/owl-unit-tests/test/cq1.ttl> .
+@prefix ex: <https://github.com/mchiaraf/owl-unit-tests/test/> .
 @prefix a-spe: <https://w3id.org/arco/ontology/natural-specimen-description/> .
 
 ex:cq1.ttl a owlunit:CompetencyQuestionVerification ;
