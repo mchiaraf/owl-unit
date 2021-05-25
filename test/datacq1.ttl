@@ -1,0 +1,4 @@
+@prefix ex: <https://github.com/mchiaraf/owl-unit-tests/test/> .
+@prefix a-spe: <https://w3id.org/arco/ontology/natural-specimen-description/> .
+
+ex:Responsabile a-spe:agent ex:JaneDoe .
