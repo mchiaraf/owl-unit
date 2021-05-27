@@ -2,7 +2,7 @@
 @prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/> .
 @prefix a-mp: <https://w3id.org/arco/ontology/movable-property> .
 
-ex:cq1.ttl a owlunit:CompetencyQuestionVerification ;
+ex:cq2.ttl a owlunit:CompetencyQuestionVerification ;
  	owlunit:hasCompetencyQuestion "Who are the responsibles for specimen harvesting?" ;
  	owlunit:hasSPARQLUnitTest "PREFIX a-mp: <https://w3id.org/arco/ontology/movable-property> SELECT DISTINCT ?agent WHERE {?x a a-mp:SpecimenHarvesting . ?x a-mp:hasHarvestingResponsible ?agent .}" ;
 	owlunit:hasInputData ex:datacq2.ttl ;
