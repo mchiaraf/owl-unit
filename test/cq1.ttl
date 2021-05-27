@@ -1,6 +1,6 @@
 @prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
 @prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/> .
-@prefix a-spe: <https://w3id.org/arco/ontology/natural-specimen-description> .
+@prefix a-spe: <https://w3id.org/arco/ontology/natural-specimen-description/> .
 
 ex:cq1.ttl a owlunit:CompetencyQuestionVerification ;
  	owlunit:hasCompetencyQuestion "Who are the responsibles for specimen harvesting?" ;
