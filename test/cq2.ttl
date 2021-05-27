@@ -4,7 +4,7 @@
 
 ex:cq2.ttl a owlunit:CompetencyQuestionVerification ;
  	owlunit:hasCompetencyQuestion "Who are the responsibles for specimen harvesting?" ;
- 	owlunit:hasSPARQLUnitTest "PREFIX a-mp: <https://w3id.org/arco/ontology/movable-property/> SELECT DISTINCT ?agent WHERE {?x a a-mp:SpecimenHarvesting . ?x a-mp:hasHarvestingResponsible ?agent .}" ;
+ 	owlunit:hasSPARQLUnitTest "PREFIX a-mp: <https://w3id.org/arco/ontology/movable-property/> SELECT DISTINCT ?agent WHERE {?SpecHarvesting a-mp:hasHarvestingResponsible ?agent .}" ;
 	owlunit:hasInputData ex:datacq2.ttl ;
 	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
 	owlunit:hasExpectedResult "{  \"head\": {  \"vars\": [  \"agent\" ] } ,  \"results\": {  \"bindings\": [ {  \"agent\": {  \"type\":  \"uri\" ,  \"value\":  \"https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/JaneDoe\" } } ] } }";
