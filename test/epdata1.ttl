@@ -1,0 +1,5 @@
+@prefix ex: <https://w3id.org/OWLunit/examples/> .
+@prefix a-mp: <https://w3id.org/arco/ontology/movable-property/> .
+
+ex:i a a-mp:SpecimenHarvesting .
+ex:i a a-mp:Accession . 

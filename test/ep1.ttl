@@ -1,0 +1,7 @@
+@prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
+@prefix ex: <https://w3id.org/OWLunit/examples/> .
+@prefix a-mp: <https://w3id.org/arco/ontology/movable-property/> .
+
+ex:ep1.ttl a owlunit:ErrorProvocation ;
+	owlunit:hasInputData ex:epdata1.ttl ;
+ 	owlunit:testsOntology a-mp: 
