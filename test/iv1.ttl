@@ -4,7 +4,7 @@
 
 ex:iv1.ttl a owlunit:InferenceVerification ;
 	owlunit:hasInputData ex:ivdata1.ttl ;
-	owlunit:hasSPARQLUnitTest "PREFIX  ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/>  PREFIX a-mp: <https://w3id.org/arco/ontology/movable-property/>  ASK { ex:Struc1 a a-mp:PrimarySedimentaryStructure }" ;
+	owlunit:hasSPARQLUnitTest "PREFIX  ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/>  PREFIX a-mp: <https://w3id.org/arco/ontology/movable-property/>  ASK { ex:Struc1 a a-mp:SedimentaryStructure }" ;
 	owlunit:hasExpectedResult true ;
 	owlunit:hasReasoner owlunit:HermiT ;
  	owlunit:testsOntology a-mp: .
