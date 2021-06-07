@@ -1,5 +1,5 @@
 @prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/> .
 @prefix a-mp: <https://w3id.org/arco/ontology/movable-property/> .
 
-ex:i a a-mp:SpecimenHarvesting .
-ex:i a a-mp:Accession .
+ex:x a a-mp:SpecimenHarvesting .
+ex:x a a-mp:Accession .
