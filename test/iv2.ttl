@@ -2,8 +2,8 @@
 @prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/> .
 @prefix a-spe: <https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/DEV-1.3.0/ArCo-release/ontologie/natural-specimen-description/natural-specimen-description.owl> .
 
-ex:iv.ttl a owlunit:InferenceVerification ;
-	owlunit:hasInputData ex:ivdata.ttl ;
+ex:iv2.ttl a owlunit:InferenceVerification ;
+	owlunit:hasInputData ex:ivdata2.ttl ;
 	owlunit:hasSPARQLUnitTest "PREFIX  ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/>  PREFIX a-spe: <https://w3id.org/arco/ontology/natural-specimen-description/>  ASK { ex:Struc1 a a-spe:SedimentaryStructure }" ;
 	owlunit:hasExpectedResult true ;
 	owlunit:hasReasoner owlunit:HermiT ;
