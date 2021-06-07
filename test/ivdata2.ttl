@@ -1,4 +1,4 @@
 @prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/> .
 @prefix a-spe: <https://w3id.org/arco/ontology/natural-specimen-description/> .
 
-ex:Struc1 a a-spe:SedimentaryStructure .
+ex:Struc1 a a-spe:PrimarySedimentaryStructure .
