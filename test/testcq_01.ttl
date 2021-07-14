@@ -5,8 +5,7 @@
 
 ex:testcq_01.ttl a owlunit:CompetencyQuestionVerification ;
  	owlunit:hasCompetencyQuestion "What are the cultural events related to the cultural property X?" ;
- 	owlunit:hasSPARQLUnitTest "PREFIX l0: <https://w3id.org/italia/onto/l0/> . PREFIX cis: <http://dati.beniculturali.it/cis/> . SELECT ?event ?eventName ?culturalProperty ?culturalPropertyLabel WHERE{ ?event cis:involves ?culturalProperty ; l0:name ?eventName . ?culturalProperty rdfs:label ?culturalPropertyLabel }
-limit 100" ;
+ 	owlunit:hasSPARQLUnitTest "PREFIX l0: <https://w3id.org/italia/onto/l0/> . PREFIX cis: <http://dati.beniculturali.it/cis/> . SELECT ?event ?eventName ?culturalProperty ?culturalPropertyLabel WHERE{ ?event cis:involves ?culturalProperty ; l0:name ?eventName . ?culturalProperty rdfs:label ?culturalPropertyLabel } limit 100" ;
 	owlunit:hasInputData ex:data_testcq_01.ttl ;
 	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
 	owlunit:hasExpectedResult "\"head\": { \"link\": [], \"vars\": [\"event\", \"eventName\", \"culturalProperty\", \"culturalPropertyLabel\"] },
