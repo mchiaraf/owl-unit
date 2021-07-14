@@ -1,0 +1,12 @@
+@prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
+@prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
+
+ex:testcq_02.ttl a owlunit:CompetencyQuestionVerification ;
+ 	owlunit:hasCompetencyQuestion "Who are the responsibles for specimen harvesting?" ;
+ 	owlunit:hasSPARQLUnitTest "PREFIX arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT * WHERE{ ?record arco-catalogue:hasCatalogueRecordVersion ?recordVersion . ?recordVersion arco-catalogue:editedAtTime ?time . ?time rdfs:label ?timeLabel } ;
+	owlunit:hasInputData ex:data_testcq02.ttl ;
+	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
+	owlunit:hasExpectedResult "{ \"head\": { \"link\": [], \"vars\": [\"record\", \"recordVersion\", \"time\", \"timeLabel\"] }, \"results\": { \"distinct\": false, \"ordered\": true, \"bindings\": [{ \"record\": { \"type\": \"uri\", \"value\": \"https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/0500212017\" } , \"recordVersion\": { \"type\": \"uri\", \"value\": \"https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/0500212017-compilation\" } , \"time\": { \"type\": \"uri\", \"value\": \"https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/1991\" } , \"timeLabel\": { \"type\": "literal", \"value\": \"1991\" }} ] } };
+	owlunit:testsOntology arco-catalogue: .

@@ -1,0 +1,7 @@
+@prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
+
+ex:0500212017 arco-catalogue:hasCatalogueRecordVersion ex:0500212017-compilation .
+ex:0500212017-compilation arco-catalogue:editedAtTime ex:1991 .
+ex:1991 rdfs:label "1991" .
