@@ -2,10 +2,11 @@
 @prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/> .
 @prefix l0: <https://w3id.org/italia/onto/l0/> .
 @prefix cis: <http://dati.beniculturali.it/cis/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 ex:testcq_01.ttl a owlunit:CompetencyQuestionVerification ;
  	owlunit:hasCompetencyQuestion "What are the cultural events related to the cultural property X?" ;
- 	owlunit:hasSPARQLUnitTest "PREFIX l0: <https://w3id.org/italia/onto/l0/> PREFIX cis: <http://dati.beniculturali.it/cis/> SELECT ?event ?eventName ?culturalProperty ?culturalPropertyLabel WHERE{ ?event cis:involves ?culturalProperty ; l0:name ?eventName . ?culturalProperty rdfs:label ?culturalPropertyLabel } limit 100" ;
+ 	owlunit:hasSPARQLUnitTest "PREFIX l0: <https://w3id.org/italia/onto/l0/> PREFIX cis: <http://dati.beniculturali.it/cis/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT ?event ?eventName ?culturalProperty ?culturalPropertyLabel WHERE{ ?event cis:involves ?culturalProperty ; l0:name ?eventName . ?culturalProperty rdfs:label ?culturalPropertyLabel } limit 100" ;
 	owlunit:hasInputData ex:data_testcq_01.ttl ;
 	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
 	owlunit:hasExpectedResult "\"head\": { \"link\": [], \"vars\": [\"event\", \"eventName\", \"culturalProperty\", \"culturalPropertyLabel\"] }, \"results\": { \"distinct\": false, \"ordered\": true, \"bindings\": [ { \"event\": { \"type\": \"uri\", \"value\": \"https://w3id.org/arco/resource/CulturalEvent/0500658316-1\" } , \"eventName\": { \"type\": \"literal\", \"value\": \"L&apos;Italia che cambia attraverso i manifesti della raccolta Salce\" } , \"culturalProperty\": { \"type\": \"uri\", \"value\": \"https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500658316\" } , \"culturalPropertyLabel\": { \"type\": \"literal\", \"value\": \"Benito Mussolini con sfilata militare sullo sfondo (manifesto)\" }}, { \"event\": { \"type\": \"uri\", \"value\": \"https://w3id.org/arco/resource/CulturalEvent/0500659323-1\" } , \"eventName\": { \"type\": \"literal\", \"value\": \"Manifesti e Giornali. I quotidiani nei cartelloni pubblicitari della Raccolta Salce per i 100 anni de Il Gazzettino\" } , \"culturalProperty\": { \"type\": \"uri\", \"value\": \"https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500659323\" } , \"culturalPropertyLabel\": { \"type\": \"literal\", \"value\": \"donne e un ragazzo tra fotografie e racemi vegetali (manifesto)\" }} ] } }";
