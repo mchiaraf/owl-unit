@@ -1,0 +1,12 @@
+@prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
+@prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix arco-location: <https://w3id.org/arco/location/> .
+
+ex:testcq_04.ttl a owlunit:CompetencyQuestionVerification ;
+ 	owlunit:hasCompetencyQuestion "What are all the localisations of physical containers associated with the cultural property X? What are their types?" ;
+ 	owlunit:hasSPARQLUnitTest "PREFIX arco-location: <https://w3id.org/arco/location/> SELECT * WHERE { ?entity rdfs:label ?entityLabel ; arco-location:hasTimeIndexedTypedLocation ?location . ?location arco-location:hasLocationType arco-location:StorageLocation. }" ;
+	owlunit:hasInputData ex:data_testcq04.ttl ;
+	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
+	owlunit:hasExpectedResult "{ \"head\": { \"vars\": [\"entity\", \"entityLabel\", \"location\"] }, \"results\": { \"bindings\": [{ \"entity\": { \"type\": \"uri\", \"value\": \"https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco/1800058538\" } , \"entityLabel\": { \"type\": \"literal\", \"value\": \"TRIENTE\" } , \"location\": { \"type\": \"uri\", \"value\": \"https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco/1800058538-alternative-1\" }} ] } }";
+	owlunit:testsOntology arco-location: .
