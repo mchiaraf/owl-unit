@@ -9,4 +9,4 @@ ex:testcq_03.ttl a owlunit:CompetencyQuestionVerification ;
 	owlunit:hasInputData ex:data_testcq03.ttl ;
 	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
 	owlunit:hasExpectedResult "{ \"head\": { \"vars\": [\"entity\", \"record\", \"rit\", \"role\", \"agent\"] }, \"results\": { \"bindings\": [{ \"entity\": { \"type\": \"uri\", \"value\": \"https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco/0300185274\" } , \"record\": { \"type\": \"uri\", \"value\": \"https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco/0300185274-compilation\" } , \"rit\": { \"type\": \"uri\", \"value\": \"https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco/0300185274-compilation-061a545291b85d7ba1ea4528ed0acf3a\" } , \"role\": { \"type\": \"uri\", \"value\": \"https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco/ResponsibleCompilation\" } , \"agent\": { \"type\": \"uri\", \"value\": \"https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco/061a545291b85d7ba1ea4528ed0acf3a\" }} ] } }";
-	owlunit:testsOntology arco-catalogue: .
+	owlunit:testsOntology roapit: .
