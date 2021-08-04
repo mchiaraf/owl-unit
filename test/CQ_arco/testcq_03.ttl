@@ -5,8 +5,7 @@
 
 ex:testcq_03.ttl a owlunit:CompetencyQuestionVerification ;
  	owlunit:hasCompetencyQuestion "Who are the people involved in the editing and the updating of the catalogue record describing the cultural property X? What are their roles?" ;
- 	owlunit:hasSPARQLUnitTest "PREFIX arco-catalogue: <https://w3id.org/arco/ontology/catalogue/>
-PREFIX roapit: <https://w3id.org/italia/onto/RO/> SELECT * WHERE{ ?entity arco-catalogue:hasCatalogueRecordVersion ?record . ?record arco-catalogue:hasCatalogueRecordVersionRiT ?rit . ?rit roapit:withRole ?role ; roapit:isRoleInTimeOf ?agent }" ;
+ 	owlunit:hasSPARQLUnitTest "PREFIX arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> PREFIX roapit: <https://w3id.org/italia/onto/RO/> SELECT * WHERE{ ?entity arco-catalogue:hasCatalogueRecordVersion ?record . ?record arco-catalogue:hasCatalogueRecordVersionRiT ?rit . ?rit roapit:withRole ?role ; roapit:isRoleInTimeOf ?agent }" ;
 	owlunit:hasInputData ex:data_testcq03.ttl ;
 	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
 	owlunit:hasExpectedResult "{ \"head\": { \"vars\": [\"entity\", \"record\", \"rit\", \"role\", \"agent\"] }, \"results\": { \"bindings\": [{ \"entity\": { \"type\": \"uri\", \"value\": \"https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco/0300185274\" } , \"record\": { \"type\": \"uri\", \"value\": \"https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco/0300185274-compilation\" } , \"rit\": { \"type\": \"uri\", \"value\": \"https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco/0300185274-compilation-061a545291b85d7ba1ea4528ed0acf3a\" } , \"role\": { \"type\": \"uri\", \"value\": \"https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco/ResponsibleCompilation\" } , \"agent\": { \"type\": \"uri\", \"value\": \"https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco/061a545291b85d7ba1ea4528ed0acf3a\" }} ] } }";
