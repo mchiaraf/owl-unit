@@ -1,0 +1,8 @@
+@prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco/> .
+@prefix roapit: <https://w3id.org/italia/onto/RO/> .
+@prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
+
+ex:0300185274  arco-catalogue:hasCatalogueRecordVersion ex:0300185274-compilation .
+ex:0300185274 arco-catalogue:hasCatalogueRecordVersionRiT ex:0300185274-compilation-061a545291b85d7ba1ea4528ed0acf3a .
+ex:0300185274-compilation-061a545291b85d7ba1ea4528ed0acf3a roapit:withRole ex:ResponsibleCompilation .
+ex:0300185274-compilation-061a545291b85d7ba1ea4528ed0acf3a roapit:isRoleInTimeOf ex:061a545291b85d7ba1ea4528ed0acf3a .
