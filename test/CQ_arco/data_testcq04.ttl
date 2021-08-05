@@ -2,6 +2,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix arco-location: <https://w3id.org/arco/location/> .
 
-ex:1800058538 rdfs:label "TRIENTE" .
-ex:1800058538 arco-location:hasTimeIndexedTypedLocation ex:1800058538-alternative-1 .
-ex:1800058538-alternative-1 arco-location:hasLocationType arco-location:StorageLocation.
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300157969> rdfs:label "Leda e il Cigno (dipinto)" ;
+arco-location:hasTimeIndexedTypedLocation <https://w3id.org/arco/resource/TimeIndexedTypedLocation/0300157969-alternative-1> .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300181617> rdfs:label "Madonna con Bambino tra San Lorenzo e San Carlo Borromeo (dipinto, opera isolata)" ;
+arco-location:hasTimeIndexedTypedLocation <https://w3id.org/arco/resource/TimeIndexedTypedLocation/0300181617-alternative-1> .
