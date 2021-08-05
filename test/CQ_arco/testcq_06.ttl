@@ -1,0 +1,12 @@
+@prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
+@prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix arco-dd: <https://w3id.org/arco/denotative-description/> .
+
+ex:testcq_06.ttl a owlunit:CompetencyQuestionVerification ;
+ 	owlunit:hasCompetencyQuestion "What is the conservation status of the cultural property X? Which interventions have been proposed?" ;
+ 	owlunit:hasSPARQLUnitTest "PREFIX arco-dd: <https://w3id.org/arco/denotative-description/> SELECT ?entity ?entityLabel ?conservation ?proposedIntervention WHERE{ ?entity rdfs:label ?entityLabel ; arco-dd:proposedIntervention ?proposedIntervention ; arco-dd:hasConservationStatus ?conservation . }";
+	owlunit:hasInputData ex:data_testcq06.ttl ;
+	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
+	owlunit:hasExpectedResult "{ \"head\": { \"vars\": [\"entity\", \"entityLabel\", \"conservation\", \"proposedIntervention\"] }, \"results\": { \"bindings\": [ { \"entity\": { \"type\": \"uri\", \"value\": \"https://w3id.org/arco/resource/PhotographicHeritage/1201250441\" } , \"entityLabel\": { \"type\": \"literal\", \"value\": \"Archeologia classica - Architettura per lo spettacolo - Anfiteatri (positivo, insieme)\" } , \"conservation\": { \"type\": \"uri\", \"value\": \"https://w3id.org/arco/resource/ConservationStatus/1201250441-conservation-status-1\" } , \"proposedIntervention\": { \"type\": \"literal\", \"value\": "spolveratura/ condizionamento" }}, { \"entity\": { \"type\": \"uri\", \"value\": \"https://w3id.org/arco/resource/PhotographicHeritage/1201250441\" } , \"entityLabel\": { \"type\": \"literal\", \"value\": \"Campania - Napoli <provincia> - Pozzuoli - Anfiteatro Flavio (positivo, insieme)\" } , \"conservation\": { \"type\": \"uri\", \"value\": \"https://w3id.org/arco/resource/ConservationStatus/1201250441-conservation-status-1\" } , \"proposedIntervention\": { \"type\": \"literal\", \"value\": \"spolveratura/ condizionamento\" }} ] } }" ;
+	owlunit:testsOntology arco-dd: .
