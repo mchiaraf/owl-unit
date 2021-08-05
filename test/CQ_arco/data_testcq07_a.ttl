@@ -1,0 +1,9 @@
+@prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
+@prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco> .
+@prefix arco-core: <https://w3id.org/arco/core/> .
+@prefix arco-cd: <https://w3id.org/arco/context-description/> .
+
+ex:0100035947 arco-cd:hasDocumentation ex:0100035947-photographic-documentation-1 .
+ex:0100035947-photographic-documentation-1 a arco-cd:PhotographicDocumentation .
+ex:0100035947 arco-cd:hasDocumentation ex:0100035947-photographic-documentation-2 .
+ex:0100035947-photographic-documentation-2 a arco-cd:PhotographicDocumentation .

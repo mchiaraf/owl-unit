@@ -1,0 +1,12 @@
+@prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
+@prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco> .
+@prefix arco-core: <https://w3id.org/arco/core/> .
+@prefix arco-cd: <https://w3id.org/arco/context-description/> .
+
+ex:testcq_07.ttl a owlunit:CompetencyQuestionVerification ;
+ 	owlunit:hasCompetencyQuestion "What is the photographic documentation attached to the catalogue record describing the cultural property X?" ;
+ 	owlunit:hasSPARQLUnitTest "PREFIX arco-core: <https://w3id.org/arco/core/> PREFIX arco-cd: <https://w3id.org/arco/context-description/> SELECT ?entity ?documentation WHERE{ ?entity arco-cd:hasDocumentation ?documentation . ?documentation a arco-cd:PhotographicDocumentation }" ;
+	owlunit:hasInputData ex:data_testcq07.ttl ;
+	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
+	owlunit:hasExpectedResult "{ \"head\": { \"vars\": [\"entity\", \"documentation\"] }, \"results\": { \"bindings\": [ { \"entity\": { \"type\": \"uri\", \"value\": \"https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco/0100035947\" } , \"documentation\": { \"type\": \"uri\", \"value\": \"https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco/0100035947-photographic-documentation-1\" }}, { \"entity\": { \"type\": \"uri\", \"value\": \"https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco/0100035947\" } , \"documentation\": { \"type\": \"uri\", \"value\": \"https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco/0100035947-photographic-documentation-2\" }} ] } }" ;
+	owlunit:testsOntology arco-cd: .
