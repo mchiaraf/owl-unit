@@ -2,7 +2,7 @@
 @prefix rs:   <http://www.w3.org/2001/sw/DataAccess/tests/result-set#> .
 @prefix ex: <https://w3id.org/OWLunit/examples/> .
 @prefix arco-cd: <https://w3id.org/arco/context-description/> .
-@prefix arco-dd: <https://w3id.org/arco/denotative-description/> -
+@prefix arco-dd: <https://w3id.org/arco/denotative-description/> .
 @prefix arco-core: <https://w3id.org/arco/core/> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
