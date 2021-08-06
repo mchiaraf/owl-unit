@@ -1,0 +1,3 @@
+@prefix arco-core: <https://w3id.org/arco/core/> .
+
+<https://w3id.org/arco/resource/ArchaeologicalProperty/1200583716> arco-core:uniqueIdentifier "1200583716" .

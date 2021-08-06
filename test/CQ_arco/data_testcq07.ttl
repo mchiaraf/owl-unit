@@ -1,4 +1,3 @@
-@prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
 @prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco> .
 @prefix arco-core: <https://w3id.org/arco/core/> .
 @prefix arco-cd: <https://w3id.org/arco/context-description/> .

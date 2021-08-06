@@ -1,0 +1,22 @@
+@prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
+@prefix rs:   <http://www.w3.org/2001/sw/DataAccess/tests/result-set#> .
+@prefix ex: <https://w3id.org/OWLunit/examples/> .
+@prefix arco-core: <https://w3id.org/arco/core/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+ex:testcq_08.ttl a owlunit:CompetencyQuestionVerification ;
+ 	owlunit:hasCompetencyQuestion "What is the unique identifier of the cultural property X?" ;
+ 	owlunit:hasSPARQLUnitTest "PREFIX arco-core: <https://w3id.org/arco/core/> SELECT ?entity ?id WHERE{ ?entity arco-core:uniqueIdentifier ?id }" ;
+	owlunit:hasInputData ex:data_testcq08.ttl ;
+	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
+	owlunit:hasExpectedResult [ a                  rs:ResultSet ;
+					  rs:resultVariable  "entity", "id" ;
+					  rs:size            "2"^^xsd:int ;
+					  rs:solution        [ rs:binding  [ {rs:value     <https://w3id.org/arco/resource/ArchaeologicalProperty/1200583716> ;
+									                             rs:variable  "entity" },
+                                               {rs:value     "1200583716";
+                                               rs:variable  "id"}
+									   ]
+							     ]
+					] ;
+	owlunit:testsOntology foaf: .
