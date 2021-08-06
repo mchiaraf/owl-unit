@@ -1,4 +1,6 @@
-@prefix arco-cd: <https://w3id.org/arco/context-description/> .
+@prefix arco-core: <https://w3id.org/arco/core/> .
+@prefix arco-location: <https://w3id.org/arco/location/> .
+@prefix clvapit: <https://w3id.org/italia/onto/CLV/> .
 
 <https://w3id.org/arco/resource/HistoricOrArtisticProperty/0303254107> clvapit:hasGeometry <https://w3id.org/arco/resource/Geometry/0303254107-geometry-point-1> .
 <https://w3id.org/arco/resource/Geometry/0303254107-geometry-point-1> arco-location:hasCoordinates <https://w3id.org/arco/resource/Coordinates/0303254107-geometry-point-1-coordinates-1> .
