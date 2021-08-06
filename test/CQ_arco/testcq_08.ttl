@@ -19,4 +19,4 @@ ex:testcq_08.ttl a owlunit:CompetencyQuestionVerification ;
 									   ]
 							     ]
 					] ;
-	owlunit:testsOntology foaf: .
+	owlunit:testsOntology arco-core: .
