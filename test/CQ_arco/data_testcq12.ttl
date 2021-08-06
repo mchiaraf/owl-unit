@@ -1,0 +1,5 @@
+@prefix arco-core: <https://w3id.org/arco/core/> . @prefix arco-cd: <https://w3id.org/arco/context-description/> .
+
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1800054827> a arco-core:MovableCulturalProperty ;
+  rdfs:label "Zampognaro. (statuetta, statuine da presepio)" ;
+  arco-cd:hasUse <https://w3id.org/arco/resource/Use/1800054827-use-1> .

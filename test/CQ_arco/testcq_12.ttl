@@ -1,0 +1,26 @@
+@prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
+@prefix rs:   <http://www.w3.org/2001/sw/DataAccess/tests/result-set#> .
+@prefix ex: <https://w3id.org/OWLunit/examples/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix arco-core: <https://w3id.org/arco/core/> .
+@prefix arco-location: <https://w3id.org/arco/location/> .
+@prefix clvapit: <https://w3id.org/italia/onto/CLV/> .
+
+ex:testcq_12.ttl a owlunit:CompetencyQuestionVerification ;
+ 	owlunit:hasCompetencyQuestion "What are the usage associated to the movable cultural property X?" ;
+ 	owlunit:hasSPARQLUnitTest "PREFIX arco-core: <https://w3id.org/arco/core/> PREFIX arco-cd: <https://w3id.org/arco/context-description/> SELECT * WHERE{ ?entity a arco-core:MovableCulturalProperty ; rdfs:label ?entityLabel ; arco-cd:hasUse ?use . }" ;
+	owlunit:hasInputData ex:data_testcq12.ttl ;
+	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
+	owlunit:hasExpectedResult [ a                  rs:ResultSet ;
+					  rs:resultVariable  "entity", "entityLabel", "use" ;
+					  rs:size            "3"^^xsd:int ;
+					  rs:solution        [ rs:binding  [ rs:value     <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1800054827> ;
+									                             rs:variable  "entity"] ,
+                                             [ rs:value     "Zampognaro. (statuetta, statuine da presepio)" ;
+                                               rs:variable  "entityLabel"] ,
+                                             [ rs:value     <https://w3id.org/arco/resource/Use/1800054827-use-1> ;
+                                               rs:variable  "use"
+									   ]
+							     ]
+					 ] ;
+	owlunit:testsOntology arco-location: .
