@@ -1,0 +1,7 @@
+@prefix arco-cd: <https://w3id.org/arco/context-description/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/1600100673> rdfs:label "trasporto di Cristo al sepolcro (dipinto)" ;
+  arco-cd:hasRelatedWorkSituation <https://w3id.org/arco/resource/RelatedWorkSituation/1600100673-preparatory-final-work-1> .
+<https://w3id.org/arco/resource/RelatedWorkSituation/1600100673-preparatory-final-work-1> arco-cd:hasRelatedWork <https://w3id.org/arco/resource/PreparatoryWork/1600100673-> .
+<https://w3id.org/arco/resource/PreparatoryWork/1600100673-> a arco-cd:PreparatoryWork .

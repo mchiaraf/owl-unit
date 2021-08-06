@@ -1,0 +1,27 @@
+@prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
+@prefix rs:   <http://www.w3.org/2001/sw/DataAccess/tests/result-set#> .
+@prefix ex: <https://w3id.org/OWLunit/examples/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix arco-cd: <https://w3id.org/arco/context-description/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:testcq_14.ttl a owlunit:CompetencyQuestionVerification ;
+ 	owlunit:hasCompetencyQuestion "What are the entities that represent the preparatory phases for the cultural property X?" ;
+ 	owlunit:hasSPARQLUnitTest "PREFIX arco-cd: <https://w3id.org/arco/context-description/> SELECT * WHERE{ ?entity rdfs:label ?entityLabel ; arco-cd:hasRelatedWorkSituation ?relatedWorkSituation . ?relatedWorkSituation arco-cd:hasRelatedWork ?relatedWork . ?relatedWork a arco-cd:PreparatoryWork . }" ;
+	owlunit:hasInputData ex:data_testcq14.ttl ;
+	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
+	owlunit:hasExpectedResult [ a                  rs:ResultSet ;
+					  rs:resultVariable  "entity", "entityLabel", "relatedWorkSituation", "relatedWork" ;
+					  rs:size            "4"^^xsd:int ;
+					  rs:solution        [ rs:binding  [ rs:value     <https://w3id.org/arco/resource/HistoricOrArtisticProperty/1600100673> ;
+									                             rs:variable  "entity"] ,
+                                             [ rs:value     "trasporto di Cristo al sepolcro (dipinto)" ;
+                                               rs:variable  "entityLabel"] ,
+                                             [ rs:value     <https://w3id.org/arco/resource/RelatedWorkSituation/1600100673-preparatory-final-work-1> ;
+                                               rs:variable  "relatedWorkSituation"] ,
+                                             [ rs:value     <https://w3id.org/arco/resource/PreparatoryWork/1600100673-> ;
+                                                 rs:variable  "relatedWork"
+									   ]
+							     ]
+					 ] ;
+	owlunit:testsOntology arco-cd: .
