@@ -1,0 +1,23 @@
+@prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
+@prefix rs:   <http://www.w3.org/2001/sw/DataAccess/tests/result-set#> .
+@prefix ex: <https://w3id.org/OWLunit/examples/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix arco-cd: <https://w3id.org/arco/context-description/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:testcq_15.ttl a owlunit:CompetencyQuestionVerification ;
+ 	owlunit:hasCompetencyQuestion "What are the cultural properties made of clay?" ;
+ 	owlunit:hasSPARQLUnitTest "PREFIX arco-dd: <https://w3id.org/arco/ontology/denotative-description/> PREFIX arco-arco: <https://w3id.org/arco/ontology/arco/> SELECT ?entity ?clay WHERE{ ?entity rdf:type/rdfs:subClassOf* arco-arco:CulturalProperty ; arco-dd:hasTechnicalStatus ?techstatus. ?techstatus arco-dd:includesTechnicalCharacteristic ?clay. FILTER regex(?clay, "argilla", "i")}" ;
+	owlunit:hasInputData ex:data_testcq15.ttl ;
+	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
+	owlunit:hasExpectedResult [ a                  rs:ResultSet ;
+					  rs:resultVariable  "entity", "clay" ;
+					  rs:size            "2"^^xsd:int ;
+					  rs:solution        [ rs:binding  [ rs:value     <https://w3id.org/arco/resource/ArchaeologicalProperty/1300000986> ;
+									                             rs:variable  "entity"] ,
+                                             [ rs:value     <https://w3id.org/arco/resource/TechnicalCharacteristic/argilla-a-matrice-ritocco-a-stecca> ;
+                                               rs:variable  "clay"
+									   ]
+							     ]
+					 ] ;
+	owlunit:testsOntology arco-cd: .
