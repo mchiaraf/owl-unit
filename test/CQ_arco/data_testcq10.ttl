@@ -1,11 +1,4 @@
 @prefix arco-cd: <https://w3id.org/arco/context-description/> .
 
-<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500090756> arco-cd:hasAuthorshipAttribution <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/0500090756-1> .
-<https://w3id.org/arco/resource/PreferredAuthorshipAttribution/0500090756-1> arco-cd:hasInterventionRole <https://w3id.org/arco/resource/Role/incisore>;
-  arco-cd:hasSource <https://w3id.org/arco/resource/Source/nr-recupero-pregresso> .
-
-
-<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0100046737> rdfs:label "San Paolo Apostolo (statuetta, opera isolata)" ;
-  arco-cd:hasDating <https://w3id.org/arco/resource/Dating/0100046737-1> .
-?dating arco-cd:hasEvent <https://w3id.org/arco/resource/Event/0100046737-creation-1> ;
-  arco-cd:hasSource <https://w3id.org/arco/resource/Source/analisi-stilistica>} .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0303254107> clvapit:hasGeometry <https://w3id.org/arco/resource/Geometry/0303254107-geometry-point-1> .
+<https://w3id.org/arco/resource/Geometry/0303254107-geometry-point-1> arco-location:hasCoordinates <https://w3id.org/arco/resource/Coordinates/0303254107-geometry-point-1-coordinates-1> .

@@ -1,0 +1,26 @@
+@prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
+@prefix rs:   <http://www.w3.org/2001/sw/DataAccess/tests/result-set#> .
+@prefix ex: <https://w3id.org/OWLunit/examples/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix arco-core: <https://w3id.org/arco/core/> .
+@prefix arco-location: <https://w3id.org/arco/location/> .
+@prefix clvapit: <https://w3id.org/italia/onto/CLV/> .
+
+ex:testcq_11.ttl a owlunit:CompetencyQuestionVerification ;
+ 	owlunit:hasCompetencyQuestion "What are the geographical coordinates of the cultural property X?" ;
+ 	owlunit:hasSPARQLUnitTest "PREFIX arco-core: <https://w3id.org/arco/core/> PREFIX arco-location: <https://w3id.org/arco/location/> PREFIX clvapit: <https://w3id.org/italia/onto/CLV/> SELECT * WHERE{ ?entity clvapit:hasGeometry ?geometry . ?geometry arco-location:hasCoordinates ?coordinates . }" ;
+	owlunit:hasInputData ex:data_testcq11.ttl ;
+	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
+	owlunit:hasExpectedResult [ a                  rs:ResultSet ;
+					  rs:resultVariable  "entity", "geometry", "coordinates" ;
+					  rs:size            "3"^^xsd:int ;
+					  rs:solution        [ rs:binding  [ rs:value     <https://w3id.org/arco/resource/HistoricOrArtisticProperty/0303254107> ;
+									                             rs:variable  "entity"] ,
+                                             [ rs:value     <https://w3id.org/arco/resource/Geometry/0303254107-geometry-point-1> ;
+                                               rs:variable  "geometry"] ,
+                                             [ rs:value     <https://w3id.org/arco/resource/Coordinates/0303254107-geometry-point-1-coordinates-1> ;
+                                               rs:variable  "coordinates"
+									   ]
+							     ]
+					 ] ;
+	owlunit:testsOntology arco-location: .
