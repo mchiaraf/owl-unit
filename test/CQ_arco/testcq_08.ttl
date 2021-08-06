@@ -12,10 +12,10 @@ ex:testcq_08.ttl a owlunit:CompetencyQuestionVerification ;
 	owlunit:hasExpectedResult [ a                  rs:ResultSet ;
 					  rs:resultVariable  "entity", "id" ;
 					  rs:size            "2"^^xsd:int ;
-					  rs:solution        [ rs:binding  [ {rs:value     <https://w3id.org/arco/resource/ArchaeologicalProperty/1200583716> ;
-									                             rs:variable  "entity" },
-                                               {rs:value     "1200583716";
-                                               rs:variable  "id"}
+					  rs:solution        [ rs:binding  [ rs:value     <https://w3id.org/arco/resource/ArchaeologicalProperty/1200583716> ;
+									                             rs:variable  "entity" ,
+                                               rs:value     "1200583716";
+                                               rs:variable  "id"
 									   ]
 							     ]
 					] ;
