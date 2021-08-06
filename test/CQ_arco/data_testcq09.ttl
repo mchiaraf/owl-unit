@@ -1,0 +1,5 @@
+@prefix arco-cd: <https://w3id.org/arco/context-description/> .
+
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500090756> arco-cd:hasAuthorshipAttribution <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/0500090756-1> .
+<https://w3id.org/arco/resource/PreferredAuthorshipAttribution/0500090756-1> arco-cd:hasInterventionRole <https://w3id.org/arco/resource/Role/incisore>;
+  arco-cd:hasSource <https://w3id.org/arco/resource/Source/nr-recupero-pregresso> .

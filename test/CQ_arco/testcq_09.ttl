@@ -1,22 +1,26 @@
 @prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
 @prefix rs:   <http://www.w3.org/2001/sw/DataAccess/tests/result-set#> .
 @prefix ex: <https://w3id.org/OWLunit/examples/> .
-@prefix arco-core: <https://w3id.org/arco/core/> .
+@prefix arco-cd: <https://w3id.org/arco/context-description/> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
-ex:testcq_08.ttl a owlunit:CompetencyQuestionVerification ;
- 	owlunit:hasCompetencyQuestion "What is the unique identifier of the cultural property X?" ;
- 	owlunit:hasSPARQLUnitTest "PREFIX arco-core: <https://w3id.org/arco/core/> SELECT ?entity ?id WHERE{ ?entity arco-core:uniqueIdentifier ?id }" ;
-	owlunit:hasInputData ex:data_testcq08.ttl ;
+ex:testcq_09.ttl a owlunit:CompetencyQuestionVerification ;
+ 	owlunit:hasCompetencyQuestion "Who are the authors and what are the cultural areas associated with the cultural property X? What is their role? What is the motivation that justifies the attribution?" ;
+ 	owlunit:hasSPARQLUnitTest "PREFIX arco-cd: <https://w3id.org/arco/context-description/> SELECT * WHERE{ ?entity arco-cd:hasAuthorshipAttribution ?attribution . ?attribution arco-cd:hasInterventionRole ?role ; arco-cd:hasSource ?attributionSource }" ;
+	owlunit:hasInputData ex:data_testcq09.ttl ;
 	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
 	owlunit:hasExpectedResult [ a                  rs:ResultSet ;
-					  rs:resultVariable  "entity", "id" ;
+					  rs:resultVariable  "entity", "attribution", "role", "attributionSource" ;
 					  rs:size            "4"^^xsd:int ;
-					  rs:solution        [ rs:binding  [ rs:value     <https://w3id.org/arco/resource/ArchaeologicalProperty/1200583716> ;
+					  rs:solution        [ rs:binding  [ rs:value     <https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500090756> ;
 									                             rs:variable  "entity"] ,
-                                             [ rs:value     "1200583716";
-                                               rs:variable  "id"
+                                             [ rs:value     <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/0500090756-1> ;
+                                               rs:variable  "attribution"] ,
+                                             [ rs:value     <https://w3id.org/arco/resource/Role/incisore> ;
+                                               rs:variable  "role"] ,
+                                             [ rs:value     <https://w3id.org/arco/resource/Source/nr-recupero-pregresso> ;
+                                               rs:variable  "attributionSource"]   
 									   ]
 							     ]
 					] ;
-	owlunit:testsOntology arco-core: .
+	owlunit:testsOntology arco-cd: .
