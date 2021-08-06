@@ -19,8 +19,8 @@ ex:testcq_09.ttl a owlunit:CompetencyQuestionVerification ;
                                              [ rs:value     <https://w3id.org/arco/resource/Role/incisore> ;
                                                rs:variable  "role"] ,
                                              [ rs:value     <https://w3id.org/arco/resource/Source/nr-recupero-pregresso> ;
-                                               rs:variable  "attributionSource"]   
+                                               rs:variable  "attributionSource"
 									   ]
 							     ]
-					] ;
+					 ] ;
 	owlunit:testsOntology arco-cd: .
