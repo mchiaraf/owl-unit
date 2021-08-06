@@ -1,6 +1,6 @@
 @prefix arco-dd: <https://w3id.org/arco/ontology/denotative-description/> .
 @prefix arco-arco: <https://w3id.org/arco/ontology/arco/> .
-@prefix <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
 
 <https://w3id.org/arco/resource/ArchaeologicalProperty/1300000986> rdf:type arco-arco:CulturalProperty ;
