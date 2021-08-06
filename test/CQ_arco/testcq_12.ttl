@@ -3,8 +3,7 @@
 @prefix ex: <https://w3id.org/OWLunit/examples/> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix arco-core: <https://w3id.org/arco/core/> .
-@prefix arco-location: <https://w3id.org/arco/location/> .
-@prefix clvapit: <https://w3id.org/italia/onto/CLV/> .
+@prefix arco-cd: <https://w3id.org/arco/context-description/> .
 
 ex:testcq_12.ttl a owlunit:CompetencyQuestionVerification ;
  	owlunit:hasCompetencyQuestion "What are the usage associated to the movable cultural property X?" ;
@@ -23,4 +22,4 @@ ex:testcq_12.ttl a owlunit:CompetencyQuestionVerification ;
 									   ]
 							     ]
 					 ] ;
-	owlunit:testsOntology arco-location: .
+	owlunit:testsOntology arco-cd: .

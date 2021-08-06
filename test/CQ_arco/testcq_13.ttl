@@ -1,0 +1,27 @@
+@prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
+@prefix rs:   <http://www.w3.org/2001/sw/DataAccess/tests/result-set#> .
+@prefix ex: <https://w3id.org/OWLunit/examples/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix arco-cd: <https://w3id.org/arco/context-description/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:testcq_13.ttl a owlunit:CompetencyQuestionVerification ;
+ 	owlunit:hasCompetencyQuestion "Who a the previous owner of the cultural property X?" ;
+ 	owlunit:hasSPARQLUnitTest "PREFIX arco-cd: <https://w3id.org/arco/context-description/> SELECT * WHERE{ ?entity rdfs:label ?entityLabel ; arco-cd:hasAcquisition ?acquisition . ?acquisition arco-cd:hasPreviousOwner ?previousOwner .}" ;
+	owlunit:hasInputData ex:data_testcq13.ttl ;
+	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
+	owlunit:hasExpectedResult [ a                  rs:ResultSet ;
+					  rs:resultVariable  "entity", "entityLabel", "acquisition", "previousOwner" ;
+					  rs:size            "4"^^xsd:int ;
+					  rs:solution        [ rs:binding  [ rs:value     <https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500654890> ;
+									                             rs:variable  "entity"] ,
+                                             [ rs:value     "testa di statua di Mercurio-Turms di Veiente esperto di coroplastica (locandina)" ;
+                                               rs:variable  "entityLabel"] ,
+                                             [ rs:value     <https://w3id.org/arco/resource/Acquisition/0500654890-acquisition-1> ;
+                                               rs:variable  "acquisition"] ,
+                                             [ rs:value     <https://w3id.org/arco/resource/Agent/nando-salce> ;
+                                                 rs:variable  "previousOwner"
+									   ]
+							     ]
+					 ] ;
+	owlunit:testsOntology arco-cd: .

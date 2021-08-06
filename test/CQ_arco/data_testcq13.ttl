@@ -1,0 +1,6 @@
+@prefix arco-cd: <https://w3id.org/arco/context-description/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500654890> rdfs:label "testa di statua di Mercurio-Turms di Veiente esperto di coroplastica (locandina)" ;
+  arco-cd:hasAcquisition <https://w3id.org/arco/resource/Acquisition/0500654890-acquisition-1> .
+<https://w3id.org/arco/resource/Acquisition/0500654890-acquisition-1> arco-cd:hasPreviousOwner <https://w3id.org/arco/resource/Agent/nando-salce> .
