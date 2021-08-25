@@ -1,0 +1,26 @@
+@prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
+@prefix rs:   <http://www.w3.org/2001/sw/DataAccess/tests/result-set#> .
+@prefix ex: <https://w3id.org/OWLunit/examples/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix arco-dd: <https://w3id.org/arco/ontology/denotative-description/> .
+@prefix arco-arco: <https://w3id.org/arco/ontology/arco/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+ex:testcq_16.ttl a owlunit:CompetencyQuestionVerification ;
+ 	owlunit:hasCompetencyQuestion "Alignment of the CulturalPropertyDefinition with the thesaurus used for providing definitions of the cultural properties (RA catalogue record type)." ;
+ 	owlunit:hasSPARQLUnitTest "PREFIX arco-dd: <https://w3id.org/arco/ontology/denotative-description/> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> SELECT DISTINCT * WHERE{ ?definition rdf:type arco-dd:CulturalPropertyDefinition ; skos:closeMatch ?alignment }" ;
+	owlunit:hasInputData ex:data_testcq16.ttl ;
+	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
+	owlunit:hasExpectedResult [ a                  rs:ResultSet ;
+					  rs:resultVariable  "definition", "alignement" ;
+					  rs:size            "4"^^xsd:int ;
+					  rs:solution        [ rs:binding  [ rs:value     <https://w3id.org/arco/resource/CulturalPropertyDefinition/museo> ;
+									                             rs:variable  "definition"] ,
+                                             [ rs:value     <http://dati.beniculturali.it/vocabularies/beni_architettonici_e_paesaggistici/def/009.011> ;
+                                               rs:variable  "alignment"] ,
+                                               [ rs:value <https://w3id.org/arco/resource/CulturalPropertyDefinition/strumento>; rs:variable "definition"] ,
+                                               [ rs:value <http://dati.beniculturali.it/vocabularies/reperti_archeologici/def/009.000.000.033>; rs:variable "alignment"
+									   ]
+							     ]
+					 ] ;
+	owlunit:testsOntology arco-dd: .
