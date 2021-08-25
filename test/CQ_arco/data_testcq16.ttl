@@ -1,0 +1,6 @@
+@prefix arco-dd: <https://w3id.org/arco/ontology/denotative-description/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/arco/resource/CulturalPropertyDefinition/museo> rdf:type arco-dd:CulturalPropertyDefinition ; skos:closeMatch <http://dati.beniculturali.it/vocabularies/beni_architettonici_e_paesaggistici/def/009.011> .
+<https://w3id.org/arco/resource/CulturalPropertyDefinition/strumento> rdf:type arco-dd:CulturalPropertyDefinition ; skos:closeMatch <http://dati.beniculturali.it/vocabularies/reperti_archeologici/def/009.000.000.033> .
