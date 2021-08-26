@@ -2,14 +2,14 @@
 @prefix rs:   <http://www.w3.org/2001/sw/DataAccess/tests/result-set#> .
 @prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
-@prefix arco-dd: <https://w3id.org/arco/ontology/denotative-description/> .
-@prefix arco-arco: <https://w3id.org/arco/ontology/arco/> .
+@prefix arco-cd: <https://w3id.org/arco/context-description/> .
+@prefix arco: <https://w3id.org/arco/ontology/arco/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
-ex:testcq_16.ttl a owlunit:CompetencyQuestionVerification ;
- 	owlunit:hasCompetencyQuestion "Alignment of the CulturalPropertyDefinition with the thesaurus used for providing definitions of the cultural properties (RA catalogue record type)." ;
- 	owlunit:hasSPARQLUnitTest "PREFIX arco-dd: <https://w3id.org/arco/ontology/denotative-description/> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> SELECT DISTINCT * WHERE{ ?definition rdf:type arco-dd:CulturalPropertyDefinition ; skos:closeMatch ?alignment }" ;
-	owlunit:hasInputData ex:data_testcq16.ttl ;
+ex:testcq_17.ttl a owlunit:CompetencyQuestionVerification ;
+ 	owlunit:hasCompetencyQuestion "Who holds the copyright of a X photography?" ;
+ 	owlunit:hasSPARQLUnitTest "PREFIX arco: <https://w3id.org/arco/ontology/arco> PREFIX arco-cd: <https://w3id.org/arco/context-description/> select * where { ?CultPro a arco:CulturalProperty. ?CultPro arco-cd:hasCopyright ?right. ?right arco-cd:hasCopyrightHolder ?agent. }" ;
+	owlunit:hasInputData ex:data_testcq17.ttl ;
 	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
 	owlunit:hasExpectedResult [ a                  rs:ResultSet ;
 					  rs:resultVariable  "definition", "alignement" ;
