@@ -12,15 +12,21 @@ ex:testcq_17.ttl a owlunit:CompetencyQuestionVerification ;
 	owlunit:hasInputData ex:data_testcq17.ttl ;
 	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
 	owlunit:hasExpectedResult [ a                  rs:ResultSet ;
-					  rs:resultVariable  "definition", "alignement" ;
-					  rs:size            "4"^^xsd:int ;
-					  rs:solution        [ rs:binding  [ rs:value     <https://w3id.org/arco/resource/CulturalPropertyDefinition/museo> ;
-									                             rs:variable  "definition"] ,
-                                             [ rs:value     <http://dati.beniculturali.it/vocabularies/beni_architettonici_e_paesaggistici/def/009.011> ;
-                                               rs:variable  "alignment"] ,
-                                               [ rs:value <https://w3id.org/arco/resource/CulturalPropertyDefinition/strumento>; rs:variable "definition"] ,
-                                               [ rs:value <http://dati.beniculturali.it/vocabularies/reperti_archeologici/def/009.000.000.033>; rs:variable "alignment"
+					  rs:resultVariable  "CultPro", "right", "agent" ;
+					  rs:size            "6"^^xsd:int ;
+					  rs:solution        [ rs:binding  [ rs:value     ex:Prop1 ;
+									                             rs:variable  "CuCultPro" ] ,
+                                             [ rs:value     ex:Copyright1 ;
+                                               rs:variable  "right" ] ,
+                                             [ rs:value     ex:Agent1 ;
+                                               rs:variable "agent" ] ,
+                                             [ rs:value     ex:Prop2 ;
+                                               rs:variable "CultPro" ] ,
+                                             [ rs:value     ex:Copyright2 ;
+                                               rs:variable  "right" ] ,
+                                             [ rs:value     ex:Agent2 ;
+                                                 rs:variable "agent"
 									   ]
 							     ]
 					 ] ;
-	owlunit:testsOntology arco-dd: .
+	owlunit:testsOntology arco-cd: .

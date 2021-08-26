@@ -1,6 +1,11 @@
-@prefix arco-dd: <https://w3id.org/arco/ontology/denotative-description/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix arco-cd: <https://w3id.org/arco/context-description/> .
+@prefix arco: <https://w3id.org/arco/ontology/arco> .
+@prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco> .
 
-<https://w3id.org/arco/resource/CulturalPropertyDefinition/museo> rdf:type arco-dd:CulturalPropertyDefinition ; skos:closeMatch <http://dati.beniculturali.it/vocabularies/beni_architettonici_e_paesaggistici/def/009.011> .
-<https://w3id.org/arco/resource/CulturalPropertyDefinition/strumento> rdf:type arco-dd:CulturalPropertyDefinition ; skos:closeMatch <http://dati.beniculturali.it/vocabularies/reperti_archeologici/def/009.000.000.033> .
+ex:Prop1 a arco:CulturalProperty .
+ex:Prop1 arco-cd:hasCopyright ex:Copyright1 .
+ex:Copyright1 arco-cd:hasCopyrightHolder ex:Agent1 .
+
+ex:Prop2 a arco:CulturalProperty .
+ex:Prop2 arco-cd:hasCopyright ex:Copyright2 .
+ex:Copyright2 arco-cd:hasCopyrightHolder ex:Agent2 .
