@@ -8,7 +8,7 @@
 
 ex:testcq_18.ttl a owlunit:CompetencyQuestionVerification ;
  	owlunit:hasCompetencyQuestion "What is the ID of the X collection? And what cultural entities belong to the collection?" ;
- 	owlunit:hasSPARQLUnitTest "PREFIX arco-cd: <https://w3id.org/arco/ontology/context-description/> PREFIX cis: <http://dati.beniculturali.it/cis/> SELECT * WHERE { ?collection a cis:CollectionCulEnt. ?collection arco-cd:isCollectionIn ?collectionmemb. ?collectionmemb arco-cd:hasMemberOfCollection ?item. }"
+ 	owlunit:hasSPARQLUnitTest "PREFIX arco-cd: <https://w3id.org/arco/ontology/context-description/> PREFIX cis: <http://dati.beniculturali.it/cis/> SELECT * WHERE { ?collection a cis:CollectionCulEnt. ?collection arco-cd:isCollectionIn ?collectionmemb. ?collectionmemb arco-cd:hasMemberOfCollection ?item. }" ;
 	owlunit:hasInputData ex:data_testcq18.ttl ;
 	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
 	owlunit:hasExpectedResult [ a                  rs:ResultSet ;
