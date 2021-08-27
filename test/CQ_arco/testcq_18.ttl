@@ -1,0 +1,26 @@
+@prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
+@prefix rs:   <http://www.w3.org/2001/sw/DataAccess/tests/result-set#> .
+@prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix arco-cd: <https://w3id.org/arco/context-description/> .
+@prefix arco: <https://w3id.org/arco/ontology/arco/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+ex:testcq_18.ttl a owlunit:CompetencyQuestionVerification ;
+ 	owlunit:hasCompetencyQuestion "What is the ID of the X collection? And what cultural entities belong to the collection?" ;
+ 	owlunit:hasSPARQLUnitTest "PREFIX arco-cd: <https://w3id.org/arco/ontology/context-description/> PREFIX cis: <http://dati.beniculturali.it/cis/> SELECT * WHERE { ?collection a cis:CollectionCulEnt. ?collection arco-cd:isCollectionIn ?collectionmemb. ?collectionmemb arco-cd:hasMemberOfCollection ?item. }"
+	owlunit:hasInputData ex:data_testcq18.ttl ;
+	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
+	owlunit:hasExpectedResult [ a                  rs:ResultSet ;
+					  rs:resultVariable  "collection", "collectionmemb", "item" ;
+					  rs:size            "3"^^xsd:int ;
+					  rs:solution        [ rs:binding  [ rs:value     ex:Collection1 ;
+									                             rs:variable  "collection" ] ,
+                                             [ rs:value     ex:CollMemb1 ;
+                                               rs:variable  "collectionmemb" ] ,
+                                             [ rs:value     ex:Item1 ;
+                                               rs:variable "item"
+									   ]
+							     ]
+					 ] ;
+	owlunit:testsOntology arco-cd: .

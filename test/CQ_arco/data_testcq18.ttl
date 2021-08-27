@@ -1,0 +1,11 @@
+@prefix arco-cd: <https://w3id.org/arco/context-description/> .
+@prefix arco: <https://w3id.org/arco/ontology/arco> .
+@prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco> .
+
+ex:Prop1 a arco:CulturalProperty .
+ex:Prop1 arco-cd:hasCopyright ex:Copyright1 .
+ex:Copyright1 arco-cd:hasCopyrightHolder ex:Agent1 .
+
+ex:Prop2 a arco:CulturalProperty .
+ex:Prop2 arco-cd:hasCopyright ex:Copyright2 .
+ex:Copyright2 arco-cd:hasCopyrightHolder ex:Agent2 .
