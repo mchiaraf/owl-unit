@@ -8,7 +8,7 @@
 
 ex:testcq_19.ttl a owlunit:CompetencyQuestionVerification ;
  	owlunit:hasCompetencyQuestion "What are the cultural entities supplied by video-cinematographic documentation?" ;
- 	owlunit:hasSPARQLUnitTest "PREFIX arco-cd: <https://w3id.org/arco/context-description/> PREFIX arco: <https://w3id.org/arco/ontology/arco/> PREFIX arco-core: <https://w3id.org/arco/core/> PREFIX cis: <http://dati.beniculturali.it/cis/> SELECT * WHERE{ ?entity rdf:type/rdfs:subClassOf* arco:CulturalProperty ; arco-cd:hasDocumentation ?documentation . ?documentation a arco-cd:FilmDocumentation .}"
+ 	owlunit:hasSPARQLUnitTest "PREFIX arco-cd: <https://w3id.org/arco/context-description/> PREFIX arco: <https://w3id.org/arco/ontology/arco/> PREFIX arco-core: <https://w3id.org/arco/core/> PREFIX cis: <http://dati.beniculturali.it/cis/> SELECT * WHERE{ ?entity rdf:type/rdfs:subClassOf* arco:CulturalProperty ; arco-cd:hasDocumentation ?documentation . ?documentation a arco-cd:FilmDocumentation .}" ;
 	owlunit:hasInputData ex:data_testcq19.ttl ;
 	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
 	owlunit:hasExpectedResult [ a                  rs:ResultSet ;
