@@ -5,10 +5,10 @@
 @prefix arco-cd: <https://w3id.org/arco/context-description/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-ex:testcq_21.ttl a owlunit:CompetencyQuestionVerification ;
+ex:testcq_22.ttl a owlunit:CompetencyQuestionVerification ;
  	owlunit:hasCompetencyQuestion "What conservation interventions have not been carried out on cultural assets in the municipality of Amatrice after the summer of 2016?" ;
  	owlunit:hasSPARQLUnitTest "PREFIX  arco-core: <https://w3id.org/arco/core/> PREFIX  arco-location: <https://w3id.org/arco/location/> PREFIX  ti:   <https://w3id.org/italia/onto/TI/> PREFIX  xsd:  <http://www.w3.org/2001/XMLSchema#> PREFIX  arco-cd: <https://w3id.org/arco/context-description/> PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema/> PREFIX  cis:  <http://dati.beniculturali.it/cis/> SELECT ?int WHERE { ?cp arco-cd:hasIntervention  ?int . ?int a arco-cd:Intervention ; ti:atTime ?tempo . ?tempo  arco-core:startTime ?startdate . ?cp arco-location:hasCulturalPropertyAddress ?città . ?città rdfs:label ?nome FILTER regex(?nome, &quot;padova&quot;, &quot;i&quot;) FILTER ( xsd:int(replace(xsd:string(?startdate), &quot;-&quot;,&quot;&quot;,&quot;i&quot;)) > 20160824 ) }" ;
-	owlunit:hasInputData ex:data_testcq21.ttl ;
+	owlunit:hasInputData ex:data_testcq22.ttl ;
 	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
 	owlunit:hasExpectedResult [ a                  rs:ResultSet ;
 					  rs:resultVariable  "int" ;

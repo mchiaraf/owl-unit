@@ -1,0 +1,25 @@
+@prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
+@prefix rs:   <http://www.w3.org/2001/sw/DataAccess/tests/result-set#> .
+@prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix arco-cd: <https://w3id.org/arco/context-description/> .
+@prefix arco-core: <https://w3id.org/arco/core/> .
+
+ex:testcq_23.ttl a owlunit:CompetencyQuestionVerification ;
+ 	owlunit:hasCompetencyQuestion "What cultural assets have been forged?" ;
+ 	owlunit:hasSPARQLUnitTest "PREFIX arco-core: <https://w3id.org/arco/core/> PREFIX arco-cd: <https://w3id.org/arco/context-description/> select ?bencult where { ?bencult arco-cd:hasRelatedWork ?rel. ?rel a arco-cd:Forgery. } " ;
+	owlunit:hasInputData ex:data_testcq23.ttl ;
+	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
+	owlunit:hasExpectedResult [ a                  rs:ResultSet ;
+					  rs:resultVariable  "bencult" ;
+					  rs:size            "3"^^xsd:int ;
+					  rs:solution        [ rs:binding  [ rs:value     ex:Int1 ;
+									                             rs:variable  "bencult" ] ,
+                                             [ rs:value     ex:Int2 ;
+                                               rs:variable  "bencult" ] ,
+                                             [ rs:value     ex:xxx ;
+                                               rs:variable  "bencult"
+									   ]
+							     ]
+					 ] ;
+	owlunit:testsOntology arco-cd: .

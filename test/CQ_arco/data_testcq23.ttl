@@ -1,0 +1,9 @@
+@prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco> .
+@prefix arco-core: <https://w3id.org/arco/core/> .
+@prefix arco-cd: <https://w3id.org/arco/context-description/> .
+
+ex:BenCult1 arco-cd:hasRelatedWork ex:RelWork1 .
+ex:RelWork1 a arco-cd:Forgery.
+
+ex:BenCult2 arco-cd:hasRelatedWork ex:RelWork2 . 
+ex:RelWork2 a arco-cd:Forgery.
