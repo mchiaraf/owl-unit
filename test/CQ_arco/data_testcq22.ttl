@@ -1,0 +1,21 @@
+@prefix arco-cd: <https://w3id.org/arco/context-description/> .
+@prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix  arco-core: <https://w3id.org/arco/core/> . @prefix  arco-location: <https://w3id.org/arco/location/> .
+@prefix  ti:   <https://w3id.org/italia/onto/TI/> .
+@prefix  xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix  cis:  <http://dati.beniculturali.it/cis/> .
+
+ex:Cp1 arco-cd:hasIntervention  ex:Int1 .
+ex:Int1 a arco-cd:Intervention ;
+  ti:atTime ex:IntTime1 .
+ex:IntTime1  arco-core:startTime "2018-01-07" .
+ex:Cp1 arco-location:hasCulturalPropertyAddress ex:City1 .
+ex:City1 rdfs:label "Amatrice" .
+
+ex:Cp2 arco-cd:hasIntervention  ex:Int2 .
+ex:Int2 a arco-cd:Intervention ;
+  ti:atTime ex:IntTime2 .
+ex:IntTime2  arco-core:startTime "2018-08-08" .
+ex:Cp2 arco-location:hasCulturalPropertyAddress ex:City1 . 
+ex:City1 rdfs:label "Amatrice" .

@@ -22,7 +22,7 @@ ex:testcq_21.ttl a owlunit:CompetencyQuestionVerification ;
                                              [ rs:value     ex:Title2 ;
                                                rs:variable  "title" ] ,
                                              [ rs:value     ex:Reproduction2 ;
-                                               rs:variable  ex:Position2 ;
+                                               rs:variable  "position" ;
 									   ]
 							     ]
 					 ] ;
