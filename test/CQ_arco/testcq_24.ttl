@@ -1,0 +1,25 @@
+@prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
+@prefix rs:   <http://www.w3.org/2001/sw/DataAccess/tests/result-set#> .
+@prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix arco-cd: <https://w3id.org/arco/context-description/> .
+@prefix arco-core: <https://w3id.org/arco/core/> .
+
+ex:testcq_24.ttl a owlunit:CompetencyQuestionVerification ;
+ 	owlunit:hasCompetencyQuestion "What assets have the Sphinx as their subject?" ;
+ 	owlunit:hasSPARQLUnitTest "PREFIX arco-cd: <https://w3id.org/arco/ontology/context-description/> PREFIX arco-arco: <https://w3id.org/arco/ontology/arco/> SELECT ?cultpro WHERE { ?cultpro rdf:type/rdfs:subClassOf* arco-arco:CulturalProperty ; arco-cd:hasSubject ?sub . ?sub rdfs:label ?label FILTER(REGEX(STR(?label), &quot;sfinge&quot;, &quot;i&quot;))} " ;
+	owlunit:hasInputData ex:data_testcq24.ttl ;
+	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
+	owlunit:hasExpectedResult [ a                  rs:ResultSet ;
+					  rs:resultVariable  "cultpro" ;
+					  rs:size            "3"^^xsd:int ;
+					  rs:solution        [ rs:binding  [ rs:value     ex:Sfin1 ;
+									                             rs:variable  "bencult" ] ,
+                                             [ rs:value     ex:Sfin2 ;
+                                               rs:variable  "bencult" ] ,
+                                             [ rs:value     ex:Sfin3 ;
+                                               rs:variable  "bencult"
+									   ]
+							     ]
+					 ] ;
+	owlunit:testsOntology arco-cd: .

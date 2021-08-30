@@ -1,0 +1,11 @@
+@prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco> .
+@prefix arco-arco: <https://w3id.org/arco/ontology/arco/> .
+@prefix arco-cd: <https://w3id.org/arco/context-description/> .
+
+ex:Sfin1 rdf:type/rdfs:subClassOf* arco-arco:CulturalProperty ;
+  arco-cd:hasSubject ex:Sub1 . 
+ex:Sub1 rdfs:label "sfinge" .
+
+ex:Sfin2 rdf:type/rdfs:subClassOf* arco-arco:CulturalProperty ;
+  arco-cd:hasSubject ex:Sub2 .
+ex:Sub2 rdfs:label "sfinge e piramide" .
