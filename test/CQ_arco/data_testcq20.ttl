@@ -1,0 +1,8 @@
+@prefix arco-cd: <https://w3id.org/arco/context-description/> .
+@prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco> .
+
+ex:CultPropA arco-cd:isMemberOfArchivalRecordSetOf ex:arsmA .
+ex:arsmA arco-cd:hasArchivalRecordSet ex:arsA .
+
+ex:CultPropB arco-cd:isMemberOfArchivalRecordSetOf ex:arsmB .
+ex:arsmB arco-cd:hasArchivalRecordSet ex:arsB .

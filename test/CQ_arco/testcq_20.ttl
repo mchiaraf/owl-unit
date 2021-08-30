@@ -1,0 +1,26 @@
+@prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
+@prefix rs:   <http://www.w3.org/2001/sw/DataAccess/tests/result-set#> .
+@prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix arco-cd: <https://w3id.org/arco/context-description/> .
+
+ex:testcq_20.ttl a owlunit:CompetencyQuestionVerification ;
+ 	owlunit:hasCompetencyQuestion "What are the cultural entities supplied by video-cinematographic documentation?" ;
+ 	owlunit:hasSPARQLUnitTest "PREFIX arco-cd: <https://w3id.org/arco/context-description/> SELECT ?CultProp ?ars WHERE { ?CultProp arco-cd:isMemberOfArchivalRecordSetOf ?arsm . ?arsm arco-cd:hasArchivalRecordSet ?ars .}" ;
+	owlunit:hasInputData ex:data_testcq20.ttl ;
+	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
+	owlunit:hasExpectedResult [ a                  rs:ResultSet ;
+					  rs:resultVariable  "CultProp", "ars" ;
+					  rs:size            "4"^^xsd:int ;
+					  rs:solution        [ rs:binding  [ rs:value     ex:CultPropA ;
+									                             rs:variable  "CultProp" ] ,
+                                             [ rs:value     ex:arsA ;
+                                               rs:variable  "ars" ] ,
+                                             [ rs:value     ex:CultPropB ;
+                                               rs:variable  "CultProp" ] ,
+                                             [ rs:value     ex:arsB ;
+                                               rs:variable  "ars"
+									   ]
+							     ]
+					 ] ;
+	owlunit:testsOntology arco-cd: .
