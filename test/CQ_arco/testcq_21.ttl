@@ -1,0 +1,29 @@
+@prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
+@prefix rs:   <http://www.w3.org/2001/sw/DataAccess/tests/result-set#> .
+@prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix arco-cd: <https://w3id.org/arco/context-description/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:testcq_21.ttl a owlunit:CompetencyQuestionVerification ;
+ 	owlunit:hasCompetencyQuestion "In which position (eg: title page, cover, etc.) of a specific publication was the X print reproduced?" ;
+ 	owlunit:hasSPARQLUnitTest "PREFIX arco-cd: <https://w3id.org/arco/context-description/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT ?title ?reproduction ?position WHERE { ?publication arco-cd:hasTitle ?pubtitle . ?pubtitle rdfs:label ?title . ?publication arco-cd:hasReproduction ?reproduction . ?reproduction arco-cd:hasReproductionPosition ?position . }" ;
+	owlunit:hasInputData ex:data_testcq21.ttl ;
+	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
+	owlunit:hasExpectedResult [ a                  rs:ResultSet ;
+					  rs:resultVariable  "title", "reproduction", "position" ;
+					  rs:size            "6"^^xsd:int ;
+					  rs:solution        [ rs:binding  [ rs:value     ex:Title1 ;
+									                             rs:variable  "title" ] ,
+                                             [ rs:value     ex:Reproduction1 ;
+                                               rs:variable  "reproduction" ] ,
+                                             [ rs:value     ex:Position1 ;
+                                               rs:variable  "position" ] ,
+                                             [ rs:value     ex:Title2 ;
+                                               rs:variable  "title" ] ,
+                                             [ rs:value     ex:Reproduction2 ;
+                                               rs:variable  ex:Position2 ;
+									   ]
+							     ]
+					 ] ;
+	owlunit:testsOntology arco-cd: .

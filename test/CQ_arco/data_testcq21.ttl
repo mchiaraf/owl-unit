@@ -1,0 +1,13 @@
+@prefix arco-cd: <https://w3id.org/arco/context-description/> .
+@prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:Publication1 arco-cd:hasTitle ex:PubTitle1 .
+ex:PubTitle1 rdfs:label ex:Title1 .
+ex:Publication1 arco-cd:hasReproduction ex:Reproduction1 .
+ex:Reproduction1 arco-cd:hasReproductionPosition ex:Position1 .
+
+ex:Publication2 arco-cd:hasTitle ex:PubTitle2 .
+ex:PubTitle2 rdfs:label ex:Title2 .
+ex:Publication2 arco-cd:hasReproduction ex:Reproduction2 .
+ex:Reproduction2 arco-cd:hasReproductionPosition ex:Position2 .
