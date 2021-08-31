@@ -1,0 +1,9 @@
+@prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco> .
+@prefix arco-arco: <https://w3id.org/arco/ontology/arco/> .
+@prefix arco-cd: <https://w3id.org/arco/context-description/> .
+
+ex:Prop1 rdf:type/rdfs:subClassOf* arco-arco:CulturalProperty ;
+  arco-cd:rights "con licenza de' SS. Superiori" .
+
+ex:Prop2 rdf:type/rdfs:subClassOf* arco-arco:CulturalProperty ;
+    arco-cd:rights "privilegio reale" .
