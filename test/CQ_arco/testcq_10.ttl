@@ -4,7 +4,7 @@
 @prefix arco-cd: <https://w3id.org/arco/context-description/> .
 @prefix arco-arco: <https://w3id.org/arco/ontology/arco/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 ex:testcq_10.ttl a owlunit:CompetencyQuestionVerification ;
  	owlunit:hasCompetencyQuestion "When was the cultural property X realised? What is the motivation that justifies the chronology?" ;
