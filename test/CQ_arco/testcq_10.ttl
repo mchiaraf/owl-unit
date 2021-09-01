@@ -1,29 +1,26 @@
 @prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
 @prefix rs:   <http://www.w3.org/2001/sw/DataAccess/tests/result-set#> .
-@prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco> .
+@prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco/> .
 @prefix arco-cd: <https://w3id.org/arco/context-description/> .
-@prefix arco-dd: <https://w3id.org/arco/denotative-description/> .
-@prefix arco-core: <https://w3id.org/arco/core/> .
+@prefix arco-arco: <https://w3id.org/arco/ontology/arco/> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 ex:testcq_10.ttl a owlunit:CompetencyQuestionVerification ;
  	owlunit:hasCompetencyQuestion "When was the cultural property X realised? What is the motivation that justifies the chronology?" ;
- 	owlunit:hasSPARQLUnitTest "PREFIX arco-cd: <https://w3id.org/arco/context-description/> PREFIX arco-dd: <https://w3id.org/arco/denotative-description/> PREFIX arco-core: <https://w3id.org/arco/core/> SELECT * WHERE{?entity rdfs:label ?entityLabel ; arco-cd:hasDating ?dating . ?dating arco-cd:hasEvent ?event ; arco-cd:hasSource ?source}" ;
+ 	owlunit:hasSPARQLUnitTest "PREFIX arco-cd: <https://w3id.org/arco/context-description/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX arco-arco: <https://w3id.org/arco/ontology/arco/> SELECT * WHERE{ ?entity rdf:type/rdfs:subClassOf* arco-arco:CulturalProperty ; arco-cd:hasDating ?dating . ?dating arco-cd:hasDatingEvent ?event ; arco-cd:hasInterpretationCriterion ?crit . }" ;
 	owlunit:hasInputData ex:data_testcq10.ttl ;
 	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
 	owlunit:hasExpectedResult [ a                  rs:ResultSet ;
-					  rs:resultVariable  "entity", "entityLabel", "dating", "event", "source" ;
-					  rs:size            "5"^^xsd:int ;
-					  rs:solution        [ rs:binding  [ rs:value     <https://w3id.org/arco/resource/HistoricOrArtisticProperty/0100046737> ;
+					  rs:resultVariable  "entity", "dating", "event", "crit" ;
+					  rs:size            "4"^^xsd:int ;
+					  rs:solution        [ rs:binding  [ rs:value     ex:Entity1 ;
 									                             rs:variable  "entity"] ,
-                                             [ rs:value     "San Paolo Apostolo (statuetta, opera isolata)" ;
-                                               rs:variable  "entityLabel"] ,
-                                             [ rs:value     <https://w3id.org/arco/resource/Dating/0100046737-1> ;
+                                             [ rs:value     ex:Dating1 ;
                                                rs:variable  "dating"] ,
-                                             [ rs:value     <https://w3id.org/arco/resource/Event/0100046737-creation-1> ;
+                                             [ rs:value     ex:Creation1 ;
                                                rs:variable  "event"] ,
-                                             [ rs:value     <https://w3id.org/arco/resource/Source/analisi-stilistica> ;
-                                               rs:variable  "source"
+                                             [ rs:value     ex:Criterion1 ;
+                                               rs:variable  "crit"
 									   ]
 							     ]
 					 ] ;
