@@ -3,6 +3,7 @@
 @prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco/> .
 @prefix arco-cd: <https://w3id.org/arco/context-description/> .
 @prefix arco-arco: <https://w3id.org/arco/ontology/arco/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 ex:testcq_10.ttl a owlunit:CompetencyQuestionVerification ;
