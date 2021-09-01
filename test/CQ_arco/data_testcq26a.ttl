@@ -1,0 +1,11 @@
+@prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco> .
+@prefix arco-arco: <https://w3id.org/arco/ontology/arco/> .
+@prefix arco-dd: <https://w3id.org/arco/ontology/denotative-description> .
+@prefix muapit: <https://w3id.org/italia/onto/MU/> .
+
+ex:Photo1 a arco-core:PhotographicHeritage ;
+  arco-dd:hasMeasurementCollection ex:MeasColl1 .
+ex:MeasColl1 arco-dd:hasMeasurement ex:Meas1 .
+ex:Meas1 arco-dd:hasMeasurementType ex:Length ;
+  ex:Meas1 onto-mu:hasValue ex:12 .
+ex:12 onto-mu:hasMeasurementUnit ex:centimeter .
