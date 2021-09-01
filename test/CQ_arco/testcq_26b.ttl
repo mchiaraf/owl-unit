@@ -1,0 +1,27 @@
+@prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
+@prefix rs:   <http://www.w3.org/2001/sw/DataAccess/tests/result-set#> .
+@prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix arco-cd: <https://w3id.org/arco/context-description/> .
+@prefix arco-core: <https://w3id.org/arco/core/> .
+
+ex:testcq_26a.ttl a owlunit:CompetencyQuestionVerification ;
+ 	owlunit:hasCompetencyQuestion "What are the dimensions of photography X?" ;
+ 	owlunit:hasSPARQLUnitTest "PREFIX arco-arco: <https://w3id.org/arco/ontology/arco/> PREFIX arco-dd: <https://w3id.org/arco/ontology/denotative-description> PREFIX muapit: <https://w3id.org/italia/onto/MU/> SELECT ?photo ?meastype ?value ?unit WHERE { ?photo a arco-arco:PhotographicHeritage. ?photo arco-dd:hasMeasurementCollection ?meascoll . ?meascoll arco-dd:hasMeasurement ?meas . ?meas arco-dd:hasMeasurementType ?meastype .  ?meas arco-dd:hasValue ?measvalue . ?measvalue muapit:value ?value . ?measvalue muapit:hasMeasurementUnit ?unit } LIMIT 100" ;
+	owlunit:hasInputData ex:data_testcq26a.ttl ;
+	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
+	owlunit:hasExpectedResult [ a                  rs:ResultSet ;
+					  rs:resultVariable  "photo", "meastype", "value", "unit" ;
+					  rs:size            "4"^^xsd:int ;
+					  rs:solution        [ rs:binding  [ rs:value     ex:Photo1 ;
+									                             rs:variable  "photo" ] ,
+                                             [ rs:value     ex:Length ;
+                                               rs:variable  "meastype" ] ,
+                                             [ rs:value     ex:12 ;
+                                               rs:variable  "value" ] ,
+                                             [ rs:value     ex:centimeter ;
+                                               rs:variable  "unit"
+									   ]
+							     ]
+					 ] ;
+	owlunit:testsOntology arco-dd: .
