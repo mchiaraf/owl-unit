@@ -7,7 +7,7 @@
 
 ex:testcq_10.ttl a owlunit:CompetencyQuestionVerification ;
  	owlunit:hasCompetencyQuestion "When was the cultural property X realised? What is the motivation that justifies the chronology?" ;
- 	owlunit:hasSPARQLUnitTest "PREFIX arco-cd: <https://w3id.org/arco/context-description/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX arco-arco: <https://w3id.org/arco/ontology/arco/> SELECT * WHERE{ ?entity rdf:type/rdfs:subClassOf* arco-arco:CulturalProperty ; arco-cd:hasDating ?dating . ?dating arco-cd:hasDatingEvent ?event ; arco-cd:hasInterpretationCriterion ?crit . }" ;
+ 	owlunit:hasSPARQLUnitTest "PREFIX arco-cd: <https://w3id.org/arco/context-description/> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX arco-arco: <https://w3id.org/arco/ontology/arco/> SELECT * WHERE{ ?entity rdf:type/rdfs:subClassOf* arco-arco:CulturalProperty ; arco-cd:hasDating ?dating . ?dating arco-cd:hasDatingEvent ?event ; arco-cd:hasInterpretationCriterion ?crit . }" ;
 	owlunit:hasInputData ex:data_testcq10.ttl ;
 	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
 	owlunit:hasExpectedResult [ a                  rs:ResultSet ;
