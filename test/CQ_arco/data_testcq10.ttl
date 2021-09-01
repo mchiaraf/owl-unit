@@ -4,6 +4,6 @@
 @prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco/> .
 
 ex:Entity1 rdf:type arco-arco:CulturalProperty ;
- arco-cd:hasDating ex:Dating1 ;
- arco-cd:hasDatingEvent ex:Creation1 ;
+ arco-cd:hasDating ex:Dating1 .
+ex:Dating1 arco-cd:hasDatingEvent ex:Creation1 ;
  arco-cd:hasInterpretationCriterion ex:Criterion1 .
