@@ -1,6 +1,7 @@
 @prefix arco-cd: <https://w3id.org/arco/context-description/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix arco-arco: <https://w3id.org/arco/ontology/arco/> .
+@prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco/> .
 
 ex:Entity1 rdf:type arco-arco:CulturalProperty .
  arco-cd:hasDating ex:Dating1 ;
