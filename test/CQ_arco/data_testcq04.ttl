@@ -1,4 +1,4 @@
-@prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco> .
+@prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix arco-location: <https://w3id.org/arco/location/> .
 
