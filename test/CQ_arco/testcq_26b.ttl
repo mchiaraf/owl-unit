@@ -1,6 +1,6 @@
 @prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
 @prefix rs:   <http://www.w3.org/2001/sw/DataAccess/tests/result-set#> .
-@prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco> .
+@prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco/> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix arco-cd: <https://w3id.org/arco/context-description/> .
 @prefix arco-core: <https://w3id.org/arco/core/> .
