@@ -1,6 +1,6 @@
 @prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix arco-dd: <https://w3id.org/arco/denotative-description/> .
+@prefix arco-dd: <https://w3id.org/arco/ontology/denotative-description/> .
 
 <https://w3id.org/arco/resource/PhotographicHeritage/1201250441> reds:label "Archeologia classica - Architettura per lo spettacolo - Anfiteatri (positivo, insieme)" ;
   arco-dd:proposedIntervention "spolveratura/ condizionamento" ;
