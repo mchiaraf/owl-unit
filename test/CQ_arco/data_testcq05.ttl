@@ -1,6 +1,6 @@
 @prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix arco-location: <https://w3id.org/arco/location/> .
+@prefix arco-location: <https://w3id.org/arco/ontology/location/> .
 
 <https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300157969> rdfs:label "Leda e il Cigno (dipinto)" ;
 arco-location:hasTimeIndexedTypedLocation <https://w3id.org/arco/resource/TimeIndexedTypedLocation/0300157969-alternative-1> .
