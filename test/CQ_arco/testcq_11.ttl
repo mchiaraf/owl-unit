@@ -5,6 +5,8 @@
 @prefix arco-core: <https://w3id.org/arco/core/> .
 @prefix arco-location: <https://w3id.org/arco/location/> .
 @prefix clvapit: <https://w3id.org/italia/onto/CLV/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 ex:testcq_11.ttl a owlunit:CompetencyQuestionVerification ;
  	owlunit:hasCompetencyQuestion "What are the geographical coordinates of the cultural property X?" ;

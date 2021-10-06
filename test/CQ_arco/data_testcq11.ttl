@@ -1,6 +1,8 @@
 @prefix arco-core: <https://w3id.org/arco/core/> .
 @prefix arco-location: <https://w3id.org/arco/location/> .
 @prefix clvapit: <https://w3id.org/italia/onto/CLV/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 <https://w3id.org/arco/resource/HistoricOrArtisticProperty/0303254107> a arco-arco:CulturalProperty ;
   clvapit:hasGeometry <https://w3id.org/arco/resource/Geometry/0303254107-geometry-point-1> .
