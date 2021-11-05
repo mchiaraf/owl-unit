@@ -7,7 +7,7 @@
 
 ex:testcq_14.ttl a owlunit:CompetencyQuestionVerification ;
  	owlunit:hasCompetencyQuestion "What are the entities that represent the preparatory phases for the cultural property X?" ;
- 	owlunit:hasSPARQLUnitTest "PREFIX arco-cd: <https://w3id.org/arco/context-description/> SELECT * WHERE{ ?entity rdfs:label ?entityLabel ; arco-cd:hasRelatedWorkSituation ?relatedWorkSituation . ?relatedWorkSituation arco-cd:hasRelatedWork ?relatedWork . ?relatedWork a arco-cd:PreparatoryWork . }" ;
+ 	owlunit:hasSPARQLUnitTest "PREFIX arco-cd: <https://w3id.org/arco/context-description/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT * WHERE{ ?entity rdfs:label ?entityLabel ; arco-cd:hasRelatedWorkSituation ?relatedWorkSituation . ?relatedWorkSituation arco-cd:hasRelatedWork ?relatedWork . ?relatedWork a arco-cd:PreparatoryWork . }" ;
 	owlunit:hasInputData ex:data_testcq14.ttl ;
 	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
 	owlunit:hasExpectedResult [ a                  rs:ResultSet ;
