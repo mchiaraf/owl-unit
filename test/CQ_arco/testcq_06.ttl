@@ -2,6 +2,7 @@
 @prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/test/CQ_arco/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix arco-dd: <https://w3id.org/arco/ontology/denotative-description/> .
+@prefix rs:   <http://www.w3.org/2001/sw/DataAccess/tests/result-set#> .
 
 ex:testcq_06.ttl a owlunit:CompetencyQuestionVerification ;
  	owlunit:hasCompetencyQuestion "What is the conservation status of the cultural property X? Which interventions have been proposed?" ;
