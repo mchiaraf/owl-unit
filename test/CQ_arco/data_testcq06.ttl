@@ -2,9 +2,9 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix arco-dd: <https://w3id.org/arco/ontology/denotative-description/> .
 
-<https://w3id.org/arco/resource/PhotographicHeritage/1201250441> rdfs:label "Archeologia classica - Architettura per lo spettacolo - Anfiteatri (positivo, insieme)" ;
+ex:1201250441 rdfs:label "Archeologia classica - Architettura per lo spettacolo - Anfiteatri (positivo, insieme)" ;
   arco-dd:proposedIntervention "spolveratura/ condizionamento" ;
-  arco-dd:hasConservationStatus  <https://w3id.org/arco/resource/ConservationStatus/1201250441-conservation-status-1> .
-<https://w3id.org/arco/resource/PhotographicHeritage/1201250441> rdfs:label "Campania - Napoli <provincia> - Pozzuoli - Anfiteatro Flavio (positivo, insieme)" ;
+  arco-dd:hasConservationStatus  ex:1201250441-conservation-status-1 .
+ex:1201250441X rdfs:label "Campania - Napoli <provincia> - Pozzuoli - Anfiteatro Flavio (positivo, insieme)" ;
   arco-dd:proposedIntervention "spolveratura/ condizionamento" ;
-  arco-dd:hasConservationStatus  <https://w3id.org/arco/resource/ConservationStatus/1201250441-conservation-status-1> .
+  arco-dd:hasConservationStatus  ex:1201250441X-conservation-status-1 .

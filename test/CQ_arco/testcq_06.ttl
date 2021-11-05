@@ -8,5 +8,20 @@ ex:testcq_06.ttl a owlunit:CompetencyQuestionVerification ;
  	owlunit:hasSPARQLUnitTest "PREFIX arco-dd: <https://w3id.org/arco/ontology/denotative-description/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT ?entity ?entityLabel ?conservation ?proposedIntervention WHERE{ ?entity rdfs:label ?entityLabel ; arco-dd:proposedIntervention ?proposedIntervention ; arco-dd:hasConservationStatus ?conservation . }";
 	owlunit:hasInputData ex:data_testcq06.ttl ;
 	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
-	owlunit:hasExpectedResult "{ \"head\": { \"vars\": [\"entity\", \"entityLabel\", \"conservation\", \"proposedIntervention\"] }, \"results\": { \"bindings\": [ { \"entity\": { \"type\": \"uri\", \"value\": \"https://w3id.org/arco/resource/PhotographicHeritage/1201250441\" } , \"entityLabel\": { \"type\": \"literal\", \"value\": \"Archeologia classica - Architettura per lo spettacolo - Anfiteatri (positivo, insieme)\" } , \"conservation\": { \"type\": \"uri\", \"value\": \"https://w3id.org/arco/resource/ConservationStatus/1201250441-conservation-status-1\" } , \"proposedIntervention\": { \"type\": \"literal\", \"value\": \"spolveratura/ condizionamento\" }}, { \"entity\": { \"type\": \"uri\", \"value\": \"https://w3id.org/arco/resource/PhotographicHeritage/1201250441\" } , \"entityLabel\": { \"type\": \"literal\", \"value\": \"Campania - Napoli <provincia> - Pozzuoli - Anfiteatro Flavio (positivo, insieme)\" } , \"conservation\": { \"type\": \"uri\", \"value\": \"https://w3id.org/arco/resource/ConservationStatus/1201250441-conservation-status-1\" } , \"proposedIntervention\": { \"type\": \"literal\", \"value\": \"spolveratura/ condizionamento\" }} ] } }" ;
+	owlunit:hasExpectedResult [ a                  rs:ResultSet ;
+					  rs:resultVariable  "entity", "entityLabel", "conservation" ;
+					  rs:size            "6"^^xsd:int ;
+					  rs:solution        [ rs:binding  [ rs:value     ex:1201250441 ;
+									                             rs:variable  "entity" ] ,
+                                             [ rs:value     "Archeologia classica - Architettura per lo spettacolo - Anfiteatri (positivo, insieme)" ;
+                                               rs:variable  "entityLabel" ] ,
+                                             [ rs:value     ex:1201250441-conservation-status-1 ;
+                                               rs:variable  "conservation" ] ,
+                                            [ rs:value     ex:1201250441 ;
+                                   						rs:variable  "entity" ] ,
+                                            [ rs:value     "Archeologia classica - Architettura per lo spettacolo - Anfiteatri (positivo, insieme)" ;
+                                              rs:variable  "entityLabel" ] ,
+                                            [ rs:value     ex:1201250441-conservation-status-1 ;                                 rs:variable  "conservation"
+							     ]
+					 ] ;
 	owlunit:testsOntology arco-dd: .
