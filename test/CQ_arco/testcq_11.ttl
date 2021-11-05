@@ -10,7 +10,7 @@
 
 ex:testcq_11.ttl a owlunit:CompetencyQuestionVerification ;
  	owlunit:hasCompetencyQuestion "What are the geographical coordinates of the cultural property X?" ;
- 	owlunit:hasSPARQLUnitTest "PREFIX arco-arco: <https://w3id.org/arco/ontology/arco/> PREFIX arco-location: <https://w3id.org/arco/ontology/location/> PREFIX clvapit: <https://w3id.org/italia/onto/CLV/> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> SELECT * WHERE{ ?entity rdf:type/rdfs:subClassOf* arco-arco:CulturalProperty ; clvapit:hasGeometry ?geometry . ?geometry arco-location:hasCoordinates ?coordinates . } limit 100" ;
+ 	owlunit:hasSPARQLUnitTest "PREFIX arco-arco: <https://w3id.org/arco/ontology/arco/> PREFIX arco-location: <https://w3id.org/arco/ontology/location/> PREFIX clvapit: <https://w3id.org/italia/onto/CLV/> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT * WHERE{ ?entity rdf:type/rdfs:subClassOf* arco-arco:CulturalProperty ; clvapit:hasGeometry ?geometry . ?geometry arco-location:hasCoordinates ?coordinates . } limit 100" ;
 	owlunit:hasInputData ex:data_testcq11.ttl ;
 	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
 	owlunit:hasExpectedResult [ a                  rs:ResultSet ;
