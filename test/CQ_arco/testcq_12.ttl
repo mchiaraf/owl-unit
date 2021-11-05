@@ -4,10 +4,11 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix arco-core: <https://w3id.org/arco/core/> .
 @prefix arco-cd: <https://w3id.org/arco/context-description/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 ex:testcq_12.ttl a owlunit:CompetencyQuestionVerification ;
  	owlunit:hasCompetencyQuestion "What are the usage associated to the movable cultural property X?" ;
- 	owlunit:hasSPARQLUnitTest "PREFIX arco-core: <https://w3id.org/arco/core/> PREFIX arco-cd: <https://w3id.org/arco/context-description/> SELECT * WHERE{ ?entity a arco-core:MovableCulturalProperty ; rdfs:label ?entityLabel ; arco-cd:hasUse ?use . }" ;
+ 	owlunit:hasSPARQLUnitTest "PREFIX arco-core: <https://w3id.org/arco/core/> PREFIX arco-cd: <https://w3id.org/arco/context-description/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT * WHERE{ ?entity a arco-core:MovableCulturalProperty ; rdfs:label ?entityLabel ; arco-cd:hasUse ?use . }" ;
 	owlunit:hasInputData ex:data_testcq12.ttl ;
 	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
 	owlunit:hasExpectedResult [ a                  rs:ResultSet ;
