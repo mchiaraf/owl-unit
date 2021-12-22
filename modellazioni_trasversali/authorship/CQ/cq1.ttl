@@ -23,5 +23,5 @@ ex:cq1.ttl a owlunit:CompetencyQuestionVerification ;
                                             rs:variable "aut"
                                             ]
                                                   ]
-                              ];
+                              ]];
 	owlunit:testsOntology a-cd: .
