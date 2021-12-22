@@ -20,6 +20,8 @@ ex:cq1.ttl a owlunit:CompetencyQuestionVerification ;
                                           [ rs:value ex:CulturalProp2_cq1 ;
                                             rs:variable "cp" ]
                                           [ rs:value ex:Aut2_cp1 ;
-                                            rs:variable "aut" ] ]
-  ];
+                                            rs:variable "aut"
+                                            ]
+                                                  ]
+                              ];
 	owlunit:testsOntology a-cd: .
