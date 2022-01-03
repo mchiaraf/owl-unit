@@ -7,7 +7,7 @@
 ex:cq1.ttl a owlunit:CompetencyQuestionVerification ;
  	owlunit:hasCompetencyQuestion "Who is the author of work x?" ;
  	owlunit:hasSPARQLUnitTest "PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/> select distinct ?cp ?aut  where { ?cp a-cd:hasAuthor ?aut } LIMIT 100" ;
-	owlunit:hasInputData ex:datacq1.ttl ;
+	owlunit:hasInputData ex:cq1_data.ttl ;
 	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
 	owlunit:hasExpectedResult [ a rs:ResultSet ;
                               rs:resultVariable "cp", "aut" ;
