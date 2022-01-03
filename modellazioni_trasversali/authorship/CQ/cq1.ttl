@@ -11,7 +11,7 @@ ex:cq1.ttl a owlunit:CompetencyQuestionVerification ;
 	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
 	owlunit:hasExpectedResult [ a rs:ResultSet ;
                               rs:resultVariable "cp", "aut" ;
-                              rs:size           "2"^^xsd:int ;
+                              rs:size           "4"^^xsd:int ;
                               rs:solution       [ rs:binding
                                           [ rs:value ex:CulturalProp_cq1 ;
                                             rs:variable "cp" ] ,
