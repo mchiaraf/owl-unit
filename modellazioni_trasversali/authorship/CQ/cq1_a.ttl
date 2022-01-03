@@ -4,7 +4,7 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix a-cd: <https://w3id.org/arco/ontology/context-description/> .
 
-ex:cq1.ttl a owlunit:CompetencyQuestionVerification ;
+ex:cq1_a.ttl a owlunit:CompetencyQuestionVerification ;
  	owlunit:hasCompetencyQuestion "Who is the author of work x?" ;
  	owlunit:hasSPARQLUnitTest "PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/> select distinct ?cp ?aut where { ?cp a-cd:hasAuthorshipAttribution ?AutAtt. ?AutAtt a-cd:hasAttributedAuthor ?aut }" ;
 	owlunit:hasInputData ex:cq1_a_data.ttl ;
