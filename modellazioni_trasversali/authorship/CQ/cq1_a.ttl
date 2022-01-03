@@ -1,0 +1,27 @@
+@prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
+@prefix rs:   <http://www.w3.org/2001/sw/DataAccess/tests/result-set#> .
+@prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/modellazioni_trasversali/authorship/CQ/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix a-cd: <https://w3id.org/arco/ontology/context-description/> .
+
+ex:cq1.ttl a owlunit:CompetencyQuestionVerification ;
+ 	owlunit:hasCompetencyQuestion "Who is the author of work x?" ;
+ 	owlunit:hasSPARQLUnitTest "PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/> select distinct ?cp ?aut where { ?cp a-cd:hasAuthorshipAttribution ?AutAtt. ?AutAtt a-cd:hasAttributedAuthor ?aut }" ;
+	owlunit:hasInputData ex:cq1_a_data.ttl ;
+	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
+	owlunit:hasExpectedResult [ a rs:ResultSet ;
+                              rs:resultVariable "cp", "aut" ;
+                              rs:size           "4"^^xsd:int ;
+                              rs:solution       [ rs:binding
+                                          [ rs:value ex:CulturalProp_cq1 ;
+                                            rs:variable "cp" ] ,
+                                          [ rs:value ex:Aut1_cp1 ;
+                                            rs:variable "aut" ] ,
+                                          [ rs:value ex:CulturalProp2_cq1 ;
+                                            rs:variable "cp" ] ,
+                                          [ rs:value ex:Aut2_cp1 ;
+                                            rs:variable "aut"
+                                            ]
+                                                ]
+                              ];
+	owlunit:testsOntology a-cd: .
