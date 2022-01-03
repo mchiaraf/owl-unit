@@ -18,7 +18,7 @@ ex:cq1.ttl a owlunit:CompetencyQuestionVerification ;
                                           [ rs:value ex:Aut_cp1 ;
                                             rs:variable "aut" ] ,
                                           [ rs:value ex:CulturalProp2_cq1 ;
-                                            rs:variable "cp" ]
+                                            rs:variable "cp" ] ,
                                           [ rs:value ex:Aut2_cp1 ;
                                             rs:variable "aut"
                                             ]
