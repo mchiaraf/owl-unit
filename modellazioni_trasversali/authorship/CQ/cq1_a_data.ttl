@@ -3,5 +3,5 @@
 
 ex:CulturalProp_cq1 a-cd:hasAuthorshipAttribution ex:AutAttr_cp1 .
 ex:AutAttr_cp1 a-cd:hasAuttributedAuthor ex:Aut1_cp1 .
-ex:CulturalProp2_cq1 a-cd:hasAuthor ex:AutAttr2_cp1 .
+ex:CulturalProp2_cq1 a-cd:hasAuthorshipAttribution ex:AutAttr2_cp1 .
 ex:AutAttr2_cp1 a-cd:hasAuttributedAuthor ex:Aut2_cp1 .
