@@ -1,0 +1,9 @@
+@prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
+@prefix rs:   <http://www.w3.org/2001/sw/DataAccess/tests/result-set#> .
+@prefix ex: <https://w3id.org/OWLunit/examples/> .
+@prefix a-cd: <https://w3id.org/arco/ontology/context-description/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+ex:CultProp1 a-cd:hasAuthorshipAttribution ex:AutAttr1 .
+ex:AutAttr1 a-cd:hasAttributedAuthor ex:Sculpt1 ;
+  a-cd:hasInterventionRole <https://w3id.org/arco/resource/Role/scultore> .
