@@ -1,0 +1,6 @@
+@prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/modellazioni_trasversali/authorship/CQ/> .
+@prefix a-cd: <https://w3id.org/arco/ontology/context-description/> .
+
+ex:Work1 a-cd:hasAuthorshipAttribution ex:AutAtt .
+ex:AutAtt a-cd:hasAttributedAuthor ex:Aut1 ;
+  a-cd:hasInterventionRole ex:Esecutore .
