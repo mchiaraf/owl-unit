@@ -20,6 +20,5 @@ ex:cq3.ttl a owlunit:CompetencyQuestionVerification ;
                                           [ rs:value ex:Esecutore ;
                                             rs:variable "role" ]
                                         ]
-                                                ]
-                              ];
+                                                ];
 	owlunit:testsOntology a-cd: .
