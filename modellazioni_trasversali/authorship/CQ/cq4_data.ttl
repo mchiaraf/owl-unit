@@ -1,0 +1,5 @@
+@prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/modellazioni_trasversali/authorship/CQ/> .
+@prefix a-cd: <https://w3id.org/arco/ontology/context-description/> .
+
+ex:CappellaSistina a-cd:hasAuthorshipAttribution ex:AutAtt_CSistin .
+ex:AutAtt_CSistina a-cd:hasAttributedAuthor ex:Michelangelo .

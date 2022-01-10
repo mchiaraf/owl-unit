@@ -1,0 +1,20 @@
+@prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
+@prefix rs:   <http://www.w3.org/2001/sw/DataAccess/tests/result-set#> .
+@prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/modellazioni_trasversali/authorship/CQ/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix a-cd: <https://w3id.org/arco/ontology/context-description/> .
+
+ex:cq4.ttl a owlunit:CompetencyQuestionVerification ;
+ 	owlunit:hasCompetencyQuestion "What are Y's works?" ;
+ 	owlunit:hasSPARQLUnitTest "PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/> select distinct ?x where { ?x a-cd:hasAuthorshipAttribution ?AutAtt. ?AutAtt a-cd:hasAttributedAuthor <https://w3id.org/arco/resource/Agent/56d8ee32618291c12ae4f357db49c221>. } " ;
+	owlunit:hasInputData ex:cq4_data.ttl ;
+	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
+	owlunit:hasExpectedResult [ a rs:ResultSet ;
+                              rs:resultVariable "work" ;
+                              rs:size           "1"^^xsd:int ;
+                              rs:solution       [ rs:binding
+                                          [ rs:value ex:CappellaSistina ;
+                                            rs:variable "work" ]
+                                        ]
+                                                ];
+	owlunit:testsOntology a-cd: .
