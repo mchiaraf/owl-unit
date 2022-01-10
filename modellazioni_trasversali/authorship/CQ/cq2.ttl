@@ -19,5 +19,5 @@ ex:cq2.ttl a owlunit:CompetencyQuestionVerification ;
                                                 rs:variable "sculptor"
                         									      ]
 							     ]
-					] ;
+					];
 	owlunit:testsOntology a-cd: .
