@@ -1,0 +1,24 @@
+@prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
+@prefix rs:   <http://www.w3.org/2001/sw/DataAccess/tests/result-set#> .
+@prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/modellazioni_trasversali/authorship/CQ/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix a-cd: <https://w3id.org/arco/ontology/context-description/> .
+
+ex:cq4.ttl a owlunit:CompetencyQuestionVerification ;
+ 	owlunit:hasCompetencyQuestion "What is the preferred authorship attribution of the work x? According to what interpretation?" ;
+ 	owlunit:hasSPARQLUnitTest "PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/> select distinct ?x ?y ?IntCr where { ?work a-cd:hasPreferredAuthor ?aut; a-cd:hasAuthorshipAttribution ?AutAtt. ?AutAtt a-cd:hasAttributedAuthor ?aut; a-cd:hasInterpretationCriterion ?IntCr } " ;
+	owlunit:hasInputData ex:cq5_data.ttl ;
+	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
+	owlunit:hasExpectedResult [ a rs:ResultSet ;
+                              rs:resultVariable "work", "aut", "interpCrit" ;
+                              rs:size           "3"^^xsd:int ;
+                              rs:solution       [ rs:binding
+                                          [ rs:value ex:MonnaLisa ;
+                                            rs:variable "work" ] ,
+                                          [ rs:value ex:Leonardo ;
+                                            rs:variable "aut" ] ,
+                                          [ rs:value ex:Criterion1 ;
+                                            rs:variable "interpCrit" ]
+                                        ]
+                                                ];
+	owlunit:testsOntology a-cd: .
