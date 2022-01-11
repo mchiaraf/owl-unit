@@ -1,0 +1,5 @@
+@prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/modellazioni_trasversali/cadastralIdentity/CQ/> .
+@prefix a-cd: <https://w3id.org/arco/ontology/context-description/> .
+
+ex:Work1 a-loc:hasCadastralIdentity ex:Work1_CadId .
+ex:Work1_CadId a-loc:hasLocationType a-loc:CurrentPhysicalLocation .

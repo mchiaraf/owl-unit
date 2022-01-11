@@ -1,0 +1,20 @@
+@prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
+@prefix rs:   <http://www.w3.org/2001/sw/DataAccess/tests/result-set#> .
+@prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/modellazioni_trasversali/cadastalIdentity/CQ/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix a-loc: <https://w3id.org/arco/ontology/location> .
+
+ex:cq1.ttl a owlunit:CompetencyQuestionVerification ;
+ 	owlunit:hasCompetencyQuestion "Which cultural property are registered in the cadastre?" ;
+ 	owlunit:hasSPARQLUnitTest "PREFIX a-loc: <https://w3id.org/arco/ontology/location> select distinct ?work where { ?x a-loc:hasCadastralIdentity ?CadId. ?CadId a-loc:hasLocationType a-loc:CurrentPhysicalLocation } " ;
+	owlunit:hasInputData ex:cq1_data.ttl ;
+	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
+	owlunit:hasExpectedResult [ a rs:ResultSet ;
+                              rs:resultVariable "work" ;
+                              rs:size           "1"^^xsd:int ;
+                              rs:solution       [ rs:binding
+                                          [ rs:value ex:Work1 ;
+                                            rs:variable "work" ]
+                                        ]
+                                                ];
+	owlunit:testsOntology a-loc: .
