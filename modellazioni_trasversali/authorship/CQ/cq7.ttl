@@ -1,0 +1,20 @@
+@prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
+@prefix rs:   <http://www.w3.org/2001/sw/DataAccess/tests/result-set#> .
+@prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/modellazioni_trasversali/authorship/CQ/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix a-cd: <https://w3id.org/arco/ontology/context-description/> .
+
+ex:cq7.ttl a owlunit:CompetencyQuestionVerification ;
+ 	owlunit:hasCompetencyQuestion "What is the bibliographic reference in which I find the attribution of the work x to author y?" ;
+ 	owlunit:hasSPARQLUnitTest "PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/> select distinct ?bib where { ?work a-cd:hasAuthorshipAttribution ?AutAtt. ?AutAtt a-cd:hasAttributedAuthor ?author; a-cd:hasBibliography ?bib.} " ;
+	owlunit:hasInputData ex:cq7_data.ttl ;
+	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
+	owlunit:hasExpectedResult [ a rs:ResultSet ;
+                              rs:resultVariable "bib" ;
+                              rs:size           "1"^^xsd:int ;
+                              rs:solution       [ rs:binding
+                                          [ rs:value ex:BibliographicReferenceX ;
+                                            rs:variable "bib" ]
+                                        ]
+                                                ];
+	owlunit:testsOntology a-cd: .
