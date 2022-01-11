@@ -1,0 +1,7 @@
+@prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/modellazioni_trasversali/authorship/CQ/> .
+@prefix a-cd: <https://w3id.org/arco/ontology/context-description/> .
+@prefix tiapit: <http://dati.gov.it/onto/tiapit/> .
+
+ex:Artwork1 a-cd:hasAuthorshipAttribution ex:AutAttribution1 .
+ex:AutAttribution1 a-cd:hasAttributedAuthor ex:Author1 ;
+  tiapit:atTime ex:1919 .
