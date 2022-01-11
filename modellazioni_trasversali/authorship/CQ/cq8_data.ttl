@@ -1,6 +1,6 @@
 @prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/modellazioni_trasversali/authorship/CQ/> .
 @prefix a-cd: <https://w3id.org/arco/ontology/context-description/> .
 
-ex:WorkX a-cd:hasAuthorshipAttribution ex:WorkX_AutAtt .
-ex:WorkX_AutAtt a-cd:hasAttributedAuthor ex:AuthorX ;
-  a-cd:hasBibliography ex:BibliographicReferenceX .
+ex:Work8 a-cd:hasAuthorshipAttribution ex:Work8_AutAtt .
+ex:Work8_AutAtt a-cd:hasAttributedAuthor ex:Aut8 ;
+  a-cd:uncertainAuthorshipAttribution true .

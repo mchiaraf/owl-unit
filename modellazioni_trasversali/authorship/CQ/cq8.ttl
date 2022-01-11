@@ -1,0 +1,20 @@
+@prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
+@prefix rs:   <http://www.w3.org/2001/sw/DataAccess/tests/result-set#> .
+@prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/modellazioni_trasversali/authorship/CQ/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix a-cd: <https://w3id.org/arco/ontology/context-description/> .
+
+ex:cq8.ttl a owlunit:CompetencyQuestionVerification ;
+ 	owlunit:hasCompetencyQuestion "Is the attribution of the author to work x uncertain?" ;
+ 	owlunit:hasSPARQLUnitTest "PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/> select distinct ?x ?bool  where { ?x a-cd:hasAuthorshipAttribution ?AutAtt. ?AutAtt a-cd:hasAttributedAuthor ?y; a-cd:uncertainAuthorshipAttribution ?bool }" ;
+	owlunit:hasInputData ex:cq8_data.ttl ;
+	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
+	owlunit:hasExpectedResult [ a rs:ResultSet ;
+                              rs:resultVariable "bool" ;
+                              rs:size           "1"^^xsd:int ;
+                              rs:solution       [ rs:binding
+                                          [ rs:value "true"^^xsd:boolean ;
+                                            rs:variable "bool" ]
+                                        ]
+                                                ];
+	owlunit:testsOntology a-cd: .
