@@ -1,13 +1,13 @@
 @prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
-@prefix rs:   <http://www.w3.org/2001/sw/DataAccess/tests/result-set#> .
+@prefix rs: <http://www.w3.org/2001/sw/DataAccess/tests/result-set#> .
 @prefix ex: <https://raw.githubusercontent.com/mchiaraf/owl-unit-tests/main/modellazioni_trasversali/authorship/CQ/> .
-@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix a-cd: <https://w3id.org/arco/ontology/context-description/> .
 @prefix tiapit: <http://dati.gov.it/onto/tiapit/> .
 
 ex:cq6.ttl a owlunit:CompetencyQuestionVerification ;
  	owlunit:hasCompetencyQuestion "When was the work x attributed to the author Y?" ;
- 	owlunit:hasSPARQLUnitTest "PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/> . PREFIX tiapit: <http://dati.gov.it/onto/tiapit/> . select distinct ?time where { ?x a-cd:hasAuthorshipAttribution ?AutAtt. ?AutAtt a-cd:hasAttributedAuthor ?y; tiapit:atTime ?time } " ;
+ 	owlunit:hasSPARQLUnitTest "PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/> PREFIX tiapit: <http://dati.gov.it/onto/tiapit/> . select distinct ?time where { ?x a-cd:hasAuthorshipAttribution ?AutAtt. ?AutAtt a-cd:hasAttributedAuthor ?y; tiapit:atTime ?time } " ;
 	owlunit:hasInputData ex:cq6_data.ttl ;
 	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
 	owlunit:hasExpectedResult [ a rs:ResultSet ;
